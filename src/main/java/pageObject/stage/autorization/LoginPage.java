@@ -64,7 +64,7 @@ public class LoginPage {
         return true;
     }
 
-    //залогиниться > отображается кнопка Выйти в хедере //loginPage.login("tapatutina@ya.ru", "559966");
+    //залогиниться > отображается кнопка Выйти в хедере //loginPage.login("bi-bi@ya.ru", "123456");
     public void signIn (String login, String pass) {
         WebElement hasPopupAuthTitleText = new WebDriverWait(driver, Duration.ofSeconds(60)).until(ExpectedConditions.elementToBeClickable(popup_auth_title_text));
         popup_auth_input_username.sendKeys(login);
@@ -88,7 +88,7 @@ public class LoginPage {
         Boolean newUr = (new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.urlContains("/my-account/profile")));
     }
 
-    //залогиниться как tapatutina@ya.ru > отображается кнопка Выйти в хедере //loginPage.signInAsTapatutinaYaRu();
+    //залогиниться как bi-bi@ya.ru > отображается кнопка Выйти в хедере //loginPage.signInAsTapatutinaYaRu();
     public void signInAsTapatutinaYaRu () {
         WebElement hasPopupAuthTitleText = new WebDriverWait(driver, Duration.ofSeconds(60)).until(ExpectedConditions.elementToBeClickable(popup_auth_title_text));
         popup_auth_input_username.sendKeys("bi-bi@ya.ru");
