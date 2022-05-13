@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="HomePage Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/Tatyana/IdeaProjects/testNG">
+
+            <packages>
+                <package name="tests.stage.homePage"> </package>
+            </packages>
+
+    </test>
+</suite>

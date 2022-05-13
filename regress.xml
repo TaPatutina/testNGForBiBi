@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite  verbose="1" preserve-order="true" name="Regress">
+
+    <test name="regressMainPage">
+        <groups>
+            <run>
+                <include name="regress"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="tests.stage.homePage"> </package>
+        </packages>
+    </test>
+
+
+    <test name="regressAccountPages">
+        <groups>
+            <run>
+                <include name="regress"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="tests.stage.accountPages"> </package>
+        </packages>
+    </test>
+
+
+    <test name="regressOrdersAnonymous">
+        <groups>
+            <run>
+                <include name="regress"/>
+            </run>
+        </groups>
+
+        <packages>
+            <package name="tests.stage.orders.anonymous"> </package>
+        </packages>
+    </test>
+
+
+    <test name="regressPagesElements">
+        <groups>
+            <run>
+                <include name="regress"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.stage.orders.Cart_108"></class>
+        </classes>
+    </test>
+
+
+
+
+</suite>
