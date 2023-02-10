@@ -4,10 +4,10 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pageObject.stage.homePage.HomePagePlashka;
+import pageObject.stage.homePage.HomePageHeaderTop;
 
 import java.time.Duration;
 
@@ -38,14 +38,14 @@ public class HPHeaderTopTest {
             //создать объект  HomePagePlashka
             HomePagePlashka homePagePlashka = new HomePagePlashka(driver);
             //согласиться с городом
-            homePagePlashka.clickAgreeWithTheCityIndex();
+            //homePagePlashka.clickAgreeWithTheCityIndex();
             //плашка закрылась
             Assert.assertFalse(homePagePlashka.isPanelOpenedIndex());
 
 
 
             //создать объект  HomePageHeaderTop
-            pageObject.stage.homePage.HomePageHeaderTop homePageHeaderTop = new pageObject.stage.homePage.HomePageHeaderTop(driver);
+            HomePageHeaderTop homePageHeaderTop = new HomePageHeaderTop(driver);
 
 
 

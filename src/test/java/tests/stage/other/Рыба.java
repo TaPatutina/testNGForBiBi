@@ -60,7 +60,7 @@ public class Рыба {
 
 
 
-            System.out.println("Автотест: tests.stage.other.Рыба - ОК");
+            System.out.println("Автотест: tests.other.stage.Рыба - ОК");
 
 
         } catch (InterruptedException e) {

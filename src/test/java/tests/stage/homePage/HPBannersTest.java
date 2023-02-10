@@ -4,10 +4,10 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pageObject.stage.homePage.HomePagePlashka;
+import pageObject.stage.homePage.HomePageBanners;
 
 import java.time.Duration;
 
@@ -39,7 +39,7 @@ public class HPBannersTest {
                 //создать объект  HomePagePlashka
                 HomePagePlashka homePagePlashka = new HomePagePlashka(driver);
                 //согласиться с городом
-                homePagePlashka.clickAgreeWithTheCityIndex();
+                //homePagePlashka.clickAgreeWithTheCityIndex();
                 //плашка закрылась
                 Assert.assertFalse(homePagePlashka.isPanelOpenedIndex());
 
@@ -48,7 +48,7 @@ public class HPBannersTest {
 
 
                 //создать объект  IndexPageBanners
-                pageObject.stage.homePage.HomePageBanners homePageBanners = new pageObject.stage.homePage.HomePageBanners(driver);
+                HomePageBanners homePageBanners = new HomePageBanners(driver);
 
 
 

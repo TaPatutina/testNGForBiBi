@@ -31,7 +31,7 @@ public class EditProfileInfoFromProfilePageTest {
     public void EditProfileInfoFromProfilePageTest() throws InterruptedException {
         try {
             driver.get("https://bi-bi.ru/product/e0000042894");
-            Thread.sleep(100);
+            Thread.sleep(1000);
 
 
 
@@ -69,15 +69,6 @@ public class EditProfileInfoFromProfilePageTest {
             pagesMyAccount.editProfileInfoSubmit();
             //проверить, что личные данные юзера сохранились
             pagesMyAccount.checkProfileInfoUpdate();
-
-
-
-
-
-
-
-
-
 
 
 

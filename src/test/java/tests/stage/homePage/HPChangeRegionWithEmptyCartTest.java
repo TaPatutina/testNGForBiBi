@@ -36,7 +36,7 @@ public class HPChangeRegionWithEmptyCartTest {
             //создать объект HomePagePlashka
             HomePagePlashka hpPlashka = new HomePagePlashka(driver);
             //согласиться с городом
-            hpPlashka.clickAgreeWithTheCityIndex();
+            //hpPlashka.clickAgreeWithTheCityIndex();
             //плашка закрылась
             Assert.assertFalse(hpPlashka.isPanelOpenedIndex());
 

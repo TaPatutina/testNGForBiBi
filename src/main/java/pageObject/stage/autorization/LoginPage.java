@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class LoginPage {
-    private WebDriver driver;
+    private final WebDriver driver;
 
     @FindBy(xpath = "//*[@id='auth-signin']/*[text() = 'Войти']") private WebElement header_signin_btn;
     @FindBy(xpath = "//*[@class='icon icon--logout']") private WebElement header_signout_btn_icon;
@@ -64,7 +64,7 @@ public class LoginPage {
         return true;
     }
 
-    //залогиниться > отображается кнопка Выйти в хедере //loginPage.login("bi-bi@ya.ru", "123456");
+    //залогинится > отображается кнопка Выйти в хедере //loginPage.login("bi-bi@ya.ru", "123456");
     public void signIn (String login, String pass) {
         WebElement hasPopupAuthTitleText = new WebDriverWait(driver, Duration.ofSeconds(60)).until(ExpectedConditions.elementToBeClickable(popup_auth_title_text));
         popup_auth_input_username.sendKeys(login);

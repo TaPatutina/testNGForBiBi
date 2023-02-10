@@ -39,10 +39,6 @@ public class MerchantProdStrogino019Test {
             driver.get("https://bi-bi.ru/productPricing?oem=OP595&brand=FILTRON");
             Thread.sleep(1000);
 
-
-
-
-
             //создать объект  Plashka
             Plashka plashka = new Plashka(driver);
 

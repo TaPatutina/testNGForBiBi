@@ -1,4 +1,4 @@
-package stage.im.tests1;
+package stage_im.tests1;
 
 
 import org.openqa.selenium.Dimension;
@@ -8,9 +8,9 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import stage.im.pageobject1.DeveloperApplyPage;
-import stage.im.pageobject1.DeveloperPortalPage;
-import stage.im.pageobject1.HomePage;
+import stage_im.pageobject1.DeveloperApplyPage;
+import stage_im.pageobject1.DeveloperPortalPage;
+import stage_im.pageobject1.HomePage;
 
 import java.time.Duration;
 

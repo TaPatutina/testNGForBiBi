@@ -1,4 +1,4 @@
-package stage.im.tests1;
+package stage_im.tests1;
 
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import stage.im.pageobject1.Plashka1;
+import stage_im.pageobject1.Plashka1;
 
 import java.time.Duration;
 

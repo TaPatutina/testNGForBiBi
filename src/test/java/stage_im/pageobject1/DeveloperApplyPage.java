@@ -1,4 +1,4 @@
-package stage.im.pageobject1;
+package stage_im.pageobject1;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
