@@ -19,6 +19,7 @@ public class HomePagePlashka extends BasePage {
 
 
     private final By agree_with_the_city_btn0 = By.xpath("//*[@data-js='region, sliderPanel']//*[contains(text(),'Да, верно')]");
+
     @FindBy(xpath = "//*[@data-js='region, sliderPanel']//*[contains(text(),'Да, верно')]")
     private WebElement agree_with_the_city_btn;
     @FindBy(xpath = "//*[@class='col-12 col-sm-6 pb-20 pb-sm-0']/div[@class='h5']")
@@ -58,6 +59,7 @@ public class HomePagePlashka extends BasePage {
         driver.findElement(agree_with_the_city_btn0).click();
         return this;
     }
+
     //дождаться плашки согласия с городом и согласиться с городом //hpPlashka.findAndClickAgreeWithTheCityIndex();
     public HomePagePlashka findAndClickAgreeWithTheCityIndex() {
         WebElement plashkaFind = driver.findElement(agree_with_the_city_btn0);

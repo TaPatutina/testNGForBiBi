@@ -1,4 +1,4 @@
-package tests.stage.homePage;
+package tests.homePage.positive;
 
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
@@ -8,37 +8,37 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pageObject.stage.homePage.HomePageHeaderTop;
 import pageObject.stage.homePage.HomePagePlashka;
+import tests.base.BaseTest;
 
 import java.time.Duration;
 
-public class HPChangeRegionWithEmptyCartTest {
-    WebDriver driver;
+import static constants.Constant.Urls.BIBI_HOME_PAGE;
 
-
-    @BeforeTest
-    public void setup() {
-        System.setProperty("webdriver.chrome.driver", "C:\\tools\\chromedriver\\chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.manage().window().setSize(new Dimension(1400, 1300));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
-    }
-
-
-
+public class changeRegionWithEmptyCartTest extends BaseTest {
 
 
     @Test
-    public void HPChangeRegionWithEmptyCart() throws InterruptedException {
+
+    public void HPChangeRegionWithEmptyCart(){
+        basePage.open(BIBI_HOME_PAGE);
+        bibiHomePage.waitAndClickAgreeRegion();
+        Assert.assertFalse(bibiHomePage.isPanelOpenedIndex());
+
+    }
+
+/*
+
+     throws InterruptedException {
         try {
             driver.get("https://bi-bi.ru");
             Thread.sleep(100);
 
             //создать объект HomePagePlashka
-            HomePagePlashka hpPlashka = new HomePagePlashka(driver);
+            //HomePagePlashka hpPlashka = new HomePagePlashka(driver);
             //согласиться с городом
             //hpPlashka.clickAgreeWithTheCityIndex();
             //плашка закрылась
-            Assert.assertFalse(hpPlashka.isPanelOpenedIndex());
+            //Assert.assertFalse(hpPlashka.isPanelOpenedIndex());
 
 
             //создать объект  HomePageHeaderTop
@@ -92,20 +92,17 @@ public class HPChangeRegionWithEmptyCartTest {
             //Assert.assertFalse(hpHeaderTop.isPopupLocationDisplayed());
 
 
-
-
-
-
-
-
-
             System.out.println("HPChangeRegionWithEmptyCartTest: смена региона из хедера на гл.странице, корзина пустая, аноним  = ОК");
 
         } catch (InterruptedException e) {
-        e.printStackTrace();
+            e.printStackTrace();
         } finally {
-        Thread.sleep(100);
-        driver.quit();
+            Thread.sleep(100);
+            driver.quit();
         }
     }
+
+
+
+ */
 }
