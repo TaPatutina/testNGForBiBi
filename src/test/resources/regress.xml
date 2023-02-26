@@ -11,7 +11,7 @@
             </run>
         </groups>
         <packages>
-            <package name="tests.stage.homePage"> </package>
+            <package name="tests.old_stage.homePage"> </package>
         </packages>
     </test>
 
@@ -23,7 +23,7 @@
             </run>
         </groups>
         <packages>
-            <package name="tests.stage.accountPages"> </package>
+            <package name="tests.old_stage.accountPages"> </package>
         </packages>
     </test>
 
@@ -36,7 +36,7 @@
         </groups>
 
         <packages>
-            <package name="tests.stage.orders.anonymous"> </package>
+            <package name="tests.old_stage.orders.anonymous"> </package>
         </packages>
     </test>
 
@@ -48,7 +48,7 @@
             </run>
         </groups>
         <classes>
-            <class name="tests.stage.orders.Cart_108"></class>
+            <class name="tests.old_stage.orders.Cart_108"></class>
         </classes>
     </test>
 

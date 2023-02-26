@@ -21,13 +21,25 @@ public class BasePage {
         driver.get(url);
     }
 
-    public WebElement waitElementIsVisible(WebElement element) {
+    public WebElement waitElementVisible(WebElement element) {
         new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT)).until(ExpectedConditions.visibilityOf(element));
         return element;
     }
 
-    public List<WebElement> waitElementsIsVisible(List<WebElement> elements) {
+
+    public WebElement waitElementInvisible(WebElement element) {
+        new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT)).until(ExpectedConditions.invisibilityOf(element));
+        return element;
+    }
+
+    public List<WebElement> waitElementsVisible(List<WebElement> elements) {
         new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT)).until(ExpectedConditions.visibilityOfAllElements(elements));
+        return elements;
+    }
+
+
+    public List<WebElement> waitElementsInvisible(List<WebElement> elements) {
+        new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT)).until(ExpectedConditions.invisibilityOfAllElements(elements));
         return elements;
     }
 

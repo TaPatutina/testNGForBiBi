@@ -7,7 +7,7 @@
     <test verbose="2" preserve-order="true" name="GetUrl">
         <parameter name="url" value="https://bi-bi.ru/"></parameter>
         <classes>
-            <class name="tests.stage.GetUrlTest"> </class>
+            <class name="tests.old_stage.GetUrlTest"> </class>
         </classes>
     </test>
 </suite>

@@ -7,6 +7,8 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import pages.base.BasePage;
 import pages.homePage.BibiHomePage;
+import pages.homePage.header.CartHomePage;
+import pages.homePage.header.LocalizationPanelHomePage;
 import pages.listing.BibiListingPage;
 
 import static common.Config.CLEAR_COOKIES_AND_STORAGE;
@@ -17,6 +19,8 @@ public class BaseTest {
     protected BasePage basePage = new BasePage(driver);
     protected BibiHomePage bibiHomePage = new BibiHomePage(driver);
     protected BibiListingPage bibiListingPage = new BibiListingPage(driver);
+    protected CartHomePage cartHomePage = new CartHomePage(driver);
+    protected LocalizationPanelHomePage localizationPanelHomePage = new LocalizationPanelHomePage(driver);
 
 
 

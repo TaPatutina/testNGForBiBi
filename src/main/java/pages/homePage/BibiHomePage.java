@@ -24,32 +24,7 @@ public class BibiHomePage extends BasePage {
     private final By homepage_logo = By.cssSelector("div.header-top__logo");
     private final By homepage_logo_img = By.xpath("//div[@class='header-top__logo']/img");
 
-    //блок локации (смена города)
-    private final By agree_city_btn = By.xpath("//div[contains(@data-js, 'sliderPanel')]//button[text()='Да, верно']");
-    private final By region_panel_elements = By.cssSelector("div.region-panel.fade.show");
-    private final By agree_with_the_city_btn = By.xpath("//div[contains(@data-js,'sliderPanel')]//button[contains(text(),'верно')]");
-    private final By region_request_text = By.xpath("//div[starts-with(@class,'col-12')]/div[@class='h5']");
-    private final By annotation_region_request = By.xpath("//div[@class='region-panel fade show']//div[@class='region-panel__desc']");
-    private final By choose_another_region_btn = By.xpath("//div[@class='region-panel__link h6 mb-0 js-region-link js-close-panel']");
-    private final By change_region_btn = By.xpath("//div[@class='iconed-links__item iconed-links__item--row']");
-    private final By popup_location = By.cssSelector("div#popup-location");
-    private final By popup_location_title_text = By.cssSelector("div.modal-title.h2");
-    private final By popup_location_default_city = By.xpath("//ul[contains(@class,'list-unstyled')]//b/div[@class='js-region-select-link']");
-    private final By region_link_SPb = By.xpath("//div[@id='popup-location']//a[contains(text(),'Санкт-Петербург')]");
-    private final By close_popup_location_btn = By.cssSelector("#popup-location div.modal-header button.close");
-    private final By name_of_region_in_header = By.xpath("//div[@class='iconed-links__item iconed-links__item--row']");
-    private final By name_of_delivery_mode_in_header = By.cssSelector("div.js-mode-name");
-    private final By name_of_store_in_header = By.xpath("//div[@class='site-region__address small d-block js-address']");
-    private final By elements_of_popup_location = By.xpath("//div[@id='popup_location']");
-    //аннотации Селениума:
-    @FindBy(xpath = "//div[@id='popup-holder_location-confirm']//div[@class='modal-title h2'][text()='При смене региона возможно изменение корзины.']")
-    private WebElement alert_location_confirm_title_text;
-    @FindBy(xpath = "//div[@id='popup-location']")
-    private WebElement popup_location_id;
-    @FindBy(css = "#popup-location div.modal-header button")
-    private WebElement close_popup_location_btn1;
-    @FindBy(xpath = "//div[@class='region-panel fade show']")
-    private List<WebElement> elements_of_plashka;
+
 
     //Перезвоните мне
     @FindBy(xpath = "//div[@class='col-auto contact-call")
@@ -157,95 +132,7 @@ public class BibiHomePage extends BasePage {
     private WebElement hp_modal_write_us_policy_close_btn;
 
 
-    //ok
-    public BibiHomePage clickAgreeRegion() {
-        driver.findElement(agree_city_btn).click();
-        return this;
-    }
 
-    //ok
-    public BibiHomePage waitAndClickAgreeRegion() {
-        WebElement plashkaFind = driver.findElement(agree_city_btn);
-        waitElementIsVisible(plashkaFind).click();
-        return this;
-    }
-
-    //плашка закрылась //Assert.assertFalse(hpPlashka.isPanelOpenedIndex());
-    public boolean isPanelOpenedIndex() {
-        WebElement agreeCityBtn = driver.findElement(agree_with_the_city_btn);
-        return agreeCityBtn.getText().contains("Да, верно");
-    }
-
-    //проверить наличие элементов плашки согласия с регионом
-    public BibiHomePage isElementsOfPlashkaToBe() {
-        List<WebElement> regionPanelElements = driver.findElements(region_panel_elements);
-        waitElementsIsVisible(regionPanelElements);
-        //String isRegionRequestText = driver.findElement(region_request_text).getText();
-        //Assert.assertEquals(isRegionRequestText, "Ваш город Москва?");
-        String isAnnotationRegionRequestText = driver.findElement(annotation_region_request).getText();
-        Assert.assertEquals(isAnnotationRegionRequestText, "От выбранного города зависят цены, наличие товара и способы доставки");
-        String agreeWithTheCityBtnText = driver.findElement(agree_with_the_city_btn).getText();
-        Assert.assertEquals(agreeWithTheCityBtnText, "Да, верно");
-        return this;
-
-    }
-
-    //согласиться с городом
-    public BibiHomePage clickAgreeWithTheCity() {
-        driver.findElement(agree_with_the_city_btn).click();
-        return this;
-    }
-
-    //плашка закрылась
-    public boolean isElementsOfPlashkaNotVisible() {
-        Boolean ElementsOfPlashkaNotVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.not(ExpectedConditions.visibilityOfAllElements(elements_of_plashka)));
-        return false;
-    }
-
-
-    //кликнуть Выбрать другой регион //hpPlashka.clickChooseAnotherRegionBtn();
-    public BibiHomePage clickChooseAnotherRegionBtn() {
-        driver.findElement(choose_another_region_btn).click();
-        return this;
-    }
-
-    //ok
-    public String isSelectedRegionName() {
-        WebElement textAttrDefaultCity = driver.findElement(popup_location_default_city);
-        return textAttrDefaultCity.getAttribute("text");
-    }
-
-    //ok
-    //кликнуть на Санкт-Петербург
-    public BibiHomePage clickToRegionLink_SPb() {
-        WebElement regionLinkSPb = driver.findElement(region_link_SPb);
-        regionLinkSPb.click();
-        return this;
-    }
-
-    //плашка закрылась (не отображается кнопка с текстом "Да, верно" - через assert (быстро) //Assert.assertFalse(hpPlashka.isAgreeWithTheCityBtnTextVisible());
-    public boolean isAgreeWithTheCityBtnTextVisible() {
-        WebElement agreeCityBtn = driver.findElement(agree_with_the_city_btn);
-        return agreeCityBtn.getText().contentEquals("Да, верно");
-    }
-
-    //в шапке отображается регион
-    public String isNameOfRegionInHeader() {
-        WebElement nameRegionInHeader = driver.findElement(name_of_region_in_header);
-        return nameRegionInHeader.getText();
-    }
-
-    //в шапке отображается способ получения
-    public String isNameOfDeliveryModeInHeader() {
-        WebElement nameOfDeliveryModeInHeader = driver.findElement(name_of_delivery_mode_in_header);
-        return nameOfDeliveryModeInHeader.getText();
-    }
-
-    //в шапке отображается магазин
-    public String isNameOfStoreInHeader() {
-        WebElement nameOfStoreInHeader = driver.findElement(name_of_store_in_header);
-        return nameOfStoreInHeader.getText();
-    }
 
 
     // <------------ из хедера ----------------->
