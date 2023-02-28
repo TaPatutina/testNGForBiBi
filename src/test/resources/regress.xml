@@ -48,7 +48,7 @@
             </run>
         </groups>
         <classes>
-            <class name="tests.old_stage.orders.Cart_108"></class>
+            <class name="tests.homePage.positive.CartOne"></class>
         </classes>
     </test>
 

@@ -1,4 +1,4 @@
-package pages.homePage.center;
+package pages.homePage.footer;
 
 import org.openqa.selenium.WebDriver;
 import pages.base.BasePage;
@@ -16,7 +16,7 @@ public class SearchHistoryHomePage extends BasePage {
     //  Текст "История поиска",
     //  реакция карточки рез-та прошлого поиска на наведение мышки,
     //  элементы карточки рез-та прошлого поиска,
-    //  редирект на стр поиска по клику на карточку рез-та прошлого поиска
+    //  редирект на стр поиска по клику на карточку рез-та прошлого поиска (1го, 2-го, последнего, ...)
 
 
 

@@ -1,4 +1,4 @@
-package pages.homePage.center;
+package pages.homePage.footer;
 
 import org.openqa.selenium.WebDriver;
 import pages.base.BasePage;
