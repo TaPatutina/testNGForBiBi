@@ -16,102 +16,172 @@ public class PagesMyAccount {
     private WebDriver driver;
 
 
-    @FindBy(xpath = "//*[@class='auth is-active']/a[@class='btn btn--link btn--sm auth__signout']") private WebElement header_signout_btn;
+    @FindBy(xpath = "//*[@class='auth is-active']/a[@class='btn btn--link btn--sm auth__signout']")
+    private WebElement headerSignoutBtn;
 
-    @FindBy(xpath = "(//*[@class='breadcrumbs'])/li[1]/a") private WebElement breadcrumb1;
-    @FindBy(xpath = "(//*[@class='breadcrumbs'])/li[2]") private WebElement breadcrumb2;
+    @FindBy(xpath = "(//*[@class='breadcrumbs'])/li[1]/a")
+    private WebElement breadcrumb1;
+    @FindBy(xpath = "(//*[@class='breadcrumbs'])/li[2]")
+    private WebElement breadcrumb2;
 
-    @FindBy(xpath = "//*[@class='lc-nav']//li/a[contains(text(),'Мой гараж')]") private WebElement navLinkMyGarage;
-    @FindBy(xpath = "//*[@class='lc-nav']//li/a[contains(text(),'Избранное')]") private WebElement navLinkFavorite;
-    @FindBy(xpath = "//*[@class='lc-nav']//li/a[contains(text(),'Профиль')]") private WebElement navLinkProfile;
-    @FindBy(xpath = "//*[@class='lc-nav']//li/a[contains(text(),'Мои бонусы')]") private WebElement navLinkMyBonuses;
-    @FindBy(xpath = "//*[@class='lc-nav']//li/a[contains(text(),'История заказов')]") private WebElement navLinkOrders;
-    @FindBy(xpath = "//*[@class='lc-nav']//li/a[contains(text(),'Мои отзывы')]") private WebElement navLinkMyReviews;
-    @FindBy(xpath = "//*[@class='lc-nav']//li/a[contains(text(),'Мои обращения')]") private WebElement navLinkMyTickets;
+    @FindBy(xpath = "//*[@class='lc-nav']//li/a[contains(text(),'Мой гараж')]")
+    private WebElement navLinkMyGarage;
+    @FindBy(xpath = "//*[@class='lc-nav']//li/a[contains(text(),'Избранное')]")
+    private WebElement navLinkFavorite;
+    @FindBy(xpath = "//*[@class='lc-nav']//li/a[contains(text(),'Профиль')]")
+    private WebElement navLinkProfile;
+    @FindBy(xpath = "//*[@class='lc-nav']//li/a[contains(text(),'Мои бонусы')]")
+    private WebElement navLinkMyBonuses;
+    @FindBy(xpath = "//*[@class='lc-nav']//li/a[contains(text(),'История заказов')]")
+    private WebElement navLinkOrders;
+    @FindBy(xpath = "//*[@class='lc-nav']//li/a[contains(text(),'Мои отзывы')]")
+    private WebElement navLinkMyReviews;
+    @FindBy(xpath = "//*[@class='lc-nav']//li/a[contains(text(),'Мои обращения')]")
+    private WebElement navLinkMyTickets;
 
-    @FindBy(xpath = "//*[@class='profile-block__item profile-block__item--pd']") private List<WebElement> profile_favorite_store_block;
-    @FindBy(xpath = "//*[@class='lc-nav']") private List<WebElement> profile_lc_nav_block;
-    @FindBy(xpath = "//*[@id='profile-map']") private List<WebElement> profile_map_block;
-    @FindBy(xpath = "//*[@class='profile-title__item profile-title__head mb-xs']") private WebElement name_of_store_in_profile;
-    @FindBy(xpath = "//*[@class='profile-address profile-block__item profile-block__item--pd']") private List<WebElement> profile_address_block;
-    @FindBy(xpath = "//*[@class='favourite-shop__btn-panel']//a[contains(text(),'Сменить магазин')]") private WebElement profile_change_store_btn;
-    @FindBy(xpath = "(//*[@id='popup-delivery']//li//button[@data-shop-pos='017_Химки'])[contains(text(),'Выбрать')]") private WebElement header_map_shop_pos_017_btn;
-    @FindBy(xpath = "(//*[@id='popup-delivery']//li//button[@data-shop-pos='019_Строгино'])[contains(text(),'Выбрать')]") private WebElement header_map_shop_pos_019_btn;
-    @FindBy(xpath = "(//*[@id='popup-delivery']//li//*[@data-shop-pos='020_Печатники'])[contains(text(),'Выбрать')]") private WebElement header_map_shop_pos_020_btn;
-    @FindBy(xpath = "(//*[@data-js='deliveryPopup']//span)[3]") private WebElement name_of_store_in_header;
-    @FindBy(xpath = "//*[@id='popup_cart_delivery_new']") private WebElement profile_map_shops;
-    @FindBy(xpath = "//*[@id='popup_cart_delivery_new']/h2[contains(text(), 'Выберите магазин')]") private WebElement profile_map_shop_title;
-    @FindBy(xpath = "//*[@id='popup_cart_delivery_new']/*[@class='popup__close']/*[@class='icon icon--close']") private WebElement close_popup_map_delivery_new_btn;
-    @FindBy(xpath = "(//*[@id='popup_cart_delivery_new']//li//button[@data-shop-pos='017_Химки'])[contains(text(),'Выбрать')]") private WebElement profile_map_shop_pos_017_btn;
-    @FindBy(xpath = "(//*[@id='popup_cart_delivery_new']//li//button[@data-shop-pos='019_Строгино'])[contains(text(),'Выбрать')]") private WebElement profile_map_shop_pos_019_btn;
-    @FindBy(xpath = "(//*[@id='popup_cart_delivery_new']//li//button[@data-shop-pos='020_Печатники'])[contains(text(),'Выбрать')]") private WebElement profile_map_shop_pos_020_btn;
-
-
-
-    @FindBy(xpath = "//*[@class='profile-control']//*[text()='Изменить пароль']") private WebElement popup_profile_change_pass_btn;
-    @FindBy(xpath = "//div[@data-js='changeUserPassForm']//h2[contains(text(),'Изменить')]") private WebElement popup_profile_change_pass_title;
-    @FindBy(xpath = "//div[@data-js='changeUserPassForm']//label[text()='Старый пароль']") private WebElement popup_profile_change_pass_label_old_pass;
-    @FindBy(xpath = "//div[@data-js='changeUserPassForm']//input[@name='currentPassword']") private WebElement popup_profile_change_pass_input_current_pass;
-    @FindBy(xpath = "//div[@data-js='changeUserPassForm']//label[text()='Новый пароль']") private WebElement popup_profile_change_pass_label_new_pass;
-    @FindBy(xpath = "//div[@data-js='changeUserPassForm']//input[@name='newPassword']") private WebElement popup_profile_change_pass_input_new_pass;
-    @FindBy(xpath = "//div[@data-js='changeUserPassForm']//label[text()='Повторите пароль']") private WebElement popup_profile_change_pass_label_check_new_pass;
-    @FindBy(xpath = "//div[@data-js='changeUserPassForm']//input[@name='checkNewPassword']") private WebElement popup_profile_change_pass_input_check_new_pass;
-    @FindBy(xpath = "//div[@data-js='changeUserPassForm']//button[@type='submit'][@disabled][text()='Изменить']") private WebElement popup_profile_change_pass_submit_btn_disabled;
-    @FindBy(xpath = "(//div[@data-js='changeUserPassForm']//*[@class='icon icon--close'])[1]") private WebElement popup_profile_change_pass_close_btn;
-    @FindBy(xpath = "//div[@data-js='addressControl']//*[text()='Добавить новый адрес']") private WebElement profile_add_new_address_btn;
-    @FindBy(xpath = "//div[@data-js='addressControl']//*[@class='icon icon--edit']") private WebElement profile_edit_address1_icon;
-    @FindBy(xpath = "//div[@data-js='addressControl']//a[text()=' Изменить']") private WebElement profile_link_edit_address1_text;
-    @FindBy(xpath = "//div[@id='popup-address']//*[text()='Добавить адрес доставки'][@data-type='ADD']") private WebElement profile_add_new_address_popup_title;
-    @FindBy(xpath = "//div[@id='popup-address']//*[@class='icon icon--close']") private WebElement profile_address_popup_close_btn;
-    @FindBy(xpath = "//div[@id='popup-address']//*[@data-js='dadata']//input[@data-field='fulladdress']") private WebElement profile_add_new_address_popup_fulladdress_input;
-    @FindBy(xpath = "//div[@id='popup-address']//button[@type='submit'][@disabled][text()='Сохранить']") private WebElement popup_profile_add_new_address_submit_btn_disabled;
-    @FindBy(xpath = "//div[@id='popup-address']//*[text()='Адрес доставки'][@data-type='EDIT']") private WebElement profile_edit_address_popup_title;
-
-
-
-    @FindBy(xpath = "//*[@class='btn btn--block btn--name']") private WebElement edit_profile_info_btn;
-    @FindBy(xpath = "//*[@id='popup-profile-change']/h2[text()='Персональные данные']") private WebElement popup_edit_profile_info_title;
-    @FindBy(xpath = "//*[@id='popup-profile-change']//label[text()='Имя']") private WebElement popup_edit_profile_info_label_name;
-    @FindBy(xpath = "//*[@id='popup-profile-change']//input[@name='firstName']") private WebElement popup_edit_profile_info_input_name;
-    @FindBy(xpath = "//*[@id='popup-profile-change']//label[text()='Фамилия']") private WebElement popup_edit_profile_info_label_surname;
-    @FindBy(xpath = "//*[@id='popup-profile-change']//input[@name='lastName']") private WebElement popup_edit_profile_info_input_surname;
-    @FindBy(xpath = "//*[@id='popup-profile-change']//label[text()='Дата рождения']") private WebElement popup_edit_profile_info_label_birthday;
-    @FindBy(xpath = "//*[@id='popup-profile-change']//input[@name='birthDate']") private WebElement popup_edit_profile_info_input_birthdate;
-    @FindBy(xpath = "//*[@id='popup-profile-change']//*[@class='input-wrapper__icon input-wrapper__icon--calendar']") private WebElement popup_edit_profile_info_calendar;
-    @FindBy(xpath = "//*[@id='ui-datepicker-div']//*[@data-handler='selectYear']") private WebElement popup_edit_profile_info_select_year;
-    @FindBy(xpath = "//*[@id='ui-datepicker-div']//*[@data-handler='selectYear']/*[text()='1974']") private WebElement popup_edit_profile_info_option_1974;
-    @FindBy(xpath = "//*[@id='ui-datepicker-div']//*[@data-handler='selectMonth']/*[text()='Oct']") private WebElement popup_edit_profile_info_option_October;
-    @FindBy(xpath = "//*[@id='ui-datepicker-div']//td[@data-handler='selectDay']/*[text()='10']") private WebElement popup_edit_profile_info_option_day10;
-    @FindBy(xpath = "//*[@id='ui-datepicker-div']//td[@data-handler='selectDay']/*[text()='12']") private WebElement popup_edit_profile_info_option_day12;
-    @FindBy(xpath = "//*[@id='popup-profile-change']//label[text()='Пол']") private WebElement popup_edit_profile_info_label_gender;
-    @FindBy(xpath = "//*[@id='popup-profile-change']//span[@class='select2-selection__arrow']") private WebElement popup_edit_profile_info_gender_select_arrow;
-    @FindBy(xpath = "//ul[@class='select2-results__options']/li[text()='Мужской']") private WebElement popup_edit_profile_info_gender_select_male;
-    @FindBy(xpath = "//ul[@class='select2-results__options']/li[text()='Женский']") private WebElement popup_edit_profile_info_gender_select_female;
-    @FindBy(xpath = "//*[@id='popup-profile-change']//label[text()='Телефон']") private WebElement popup_edit_profile_info_label_phone;
-    @FindBy(xpath = "//*[@id='popup-profile-change']//input[@name='phoneContactInfo.mobileNumber']") private WebElement popup_edit_profile_info_input_phone;
-    @FindBy(xpath = "//*[@id='popup-profile-change']//label[text()='Email']") private WebElement popup_edit_profile_info_label_email;
-    @FindBy(xpath = "//*[@id='popup-profile-change']//label[text()='Я согласен получать SMS-рассылки']") private WebElement popup_edit_profile_info_label_sms_confirmation;
-    @FindBy(xpath = "//*[@id='popup-profile-change']//label[text()='Подписка на новости']") private WebElement popup_edit_profile_info_label_email_confirmation;
-    @FindBy(xpath = "//*[@id='popup-profile-change']//*[@name='emailConfirmation']") private WebElement popup_edit_profile_info_checkbox_email_confirmation;
-    @FindBy(xpath = "//*[@id='popup-profile-change']//*[@name='smsConfirmation']") private WebElement popup_edit_profile_info_checkbox_sms_confirmation;
-    @FindBy(xpath = "//*[@id='popup-profile-change']//button[@type='submit']") private WebElement popup_edit_profile_info_submit_btn;
-    @FindBy(xpath = "//*[@id='popup-profile-change']//span[@data-popup='close']") private WebElement popup_edit_profile_info_close_btn;
+    @FindBy(xpath = "//*[@class='profile-block__item profile-block__item--pd']")
+    private List<WebElement> profileFavoriteStoreBlock;
+    @FindBy(xpath = "//*[@class='lc-nav']")
+    private List<WebElement> profileLcNavBlock;
+    @FindBy(xpath = "//*[@id='profile-map']")
+    private List<WebElement> profileMapBlock;
+    @FindBy(xpath = "//*[@class='profile-title__item profile-title__head mb-xs']")
+    private WebElement nameOfStoreInProfile;
+    @FindBy(xpath = "//*[@class='profile-address profile-block__item profile-block__item--pd']")
+    private List<WebElement> profileAddressBlock;
+    @FindBy(xpath = "//*[@class='favourite-shop__btn-panel']//a[contains(text(),'Сменить магазин')]")
+    private WebElement profileChangeStoreBtn;
+    @FindBy(xpath = "(//*[@id='popup-delivery']//li//button[@data-shop-pos='017_Химки'])[contains(text(),'Выбрать')]")
+    private WebElement headerMapShopPos017Btn;
+    @FindBy(xpath = "(//*[@id='popup-delivery']//li//button[@data-shop-pos='019_Строгино'])[contains(text(),'Выбрать')]")
+    private WebElement headerMapShopPos019Btn;
+    @FindBy(xpath = "(//*[@id='popup-delivery']//li//*[@data-shop-pos='020_Печатники'])[contains(text(),'Выбрать')]")
+    private WebElement headerMapShopPos020Btn;
+    @FindBy(xpath = "(//*[@data-js='deliveryPopup']//span)[3]")
+    private WebElement nameOfStoreInHeader;
+    @FindBy(xpath = "//*[@id='popup_cart_delivery_new']")
+    private WebElement profileMapShops;
+    @FindBy(xpath = "//*[@id='popup_cart_delivery_new']/h2[contains(text(), 'Выберите магазин')]")
+    private WebElement profileMapShopTitle;
+    @FindBy(xpath = "//*[@id='popup_cart_delivery_new']/*[@class='popup__close']/*[@class='icon icon--close']")
+    private WebElement closePopupMapDeliveryNewBtn;
+    @FindBy(xpath = "(//*[@id='popup_cart_delivery_new']//li//button[@data-shop-pos='017_Химки'])[contains(text(),'Выбрать')]")
+    private WebElement profileMapShopPos017Btn;
+    @FindBy(xpath = "(//*[@id='popup_cart_delivery_new']//li//button[@data-shop-pos='019_Строгино'])[contains(text(),'Выбрать')]")
+    private WebElement profileMapShopPos019Btn;
+    @FindBy(xpath = "(//*[@id='popup_cart_delivery_new']//li//button[@data-shop-pos='020_Печатники'])[contains(text(),'Выбрать')]")
+    private WebElement profileMapShopPos020Btn;
 
 
-    @FindBy(xpath = "//*[@class='profile-info profile-block__item profile-block__item--pd']") private List<WebElement> profile_info_block;
-    @FindBy(xpath = "//*[@class='profile-info__block']//*[@data-profile-field='firstName']") private WebElement profile_info_firstName;
-    @FindBy(xpath = "//*[@class='profile-info__block']//*[@data-profile-field='lastName']") private WebElement profile_info_lastName;
-    @FindBy(xpath = "//*[@class='profile-info__block']//*[@data-profile-field='birthDate']") private WebElement profile_info_birthDate;
-    @FindBy(xpath = "//*[@class='profile-info__block']//*[@data-profile-field='gender']") private WebElement profile_info_gender;
+    @FindBy(xpath = "//*[@class='profile-control']//*[text()='Изменить пароль']")
+    private WebElement popupProfileChangePassBtn;
+    @FindBy(xpath = "//div[@data-js='changeUserPassForm']//h2[contains(text(),'Изменить')]")
+    private WebElement popupProfileChangePassTitle;
+    @FindBy(xpath = "//div[@data-js='changeUserPassForm']//label[text()='Старый пароль']")
+    private WebElement popupProfileChangePassLabelOldPass;
+    @FindBy(xpath = "//div[@data-js='changeUserPassForm']//input[@name='currentPassword']")
+    private WebElement popupProfileChangePassInputCurrentPass;
+    @FindBy(xpath = "//div[@data-js='changeUserPassForm']//label[text()='Новый пароль']")
+    private WebElement popupProfileChangePassLabelNewPass;
+    @FindBy(xpath = "//div[@data-js='changeUserPassForm']//input[@name='newPassword']")
+    private WebElement popupProfileChangePassInputNewPass;
+    @FindBy(xpath = "//div[@data-js='changeUserPassForm']//label[text()='Повторите пароль']")
+    private WebElement popupProfileChangePassLabelCheckNewPass;
+    @FindBy(xpath = "//div[@data-js='changeUserPassForm']//input[@name='checkNewPassword']")
+    private WebElement popupProfileChangePassInputCheckNewPass;
+    @FindBy(xpath = "//div[@data-js='changeUserPassForm']//button[@type='submit'][@disabled][text()='Изменить']")
+    private WebElement popupProfileChangePassSubmitBtnDisabled;
+    @FindBy(xpath = "(//div[@data-js='changeUserPassForm']//*[@class='icon icon--close'])[1]")
+    private WebElement popupProfileChangePassCloseBtn;
+    @FindBy(xpath = "//div[@data-js='addressControl']//*[text()='Добавить новый адрес']")
+    private WebElement profileAddNewAddressBtn;
+    @FindBy(xpath = "//div[@data-js='addressControl']//*[@class='icon icon--edit']")
+    private WebElement profileEditAddress1Icon;
+    @FindBy(xpath = "//div[@data-js='addressControl']//a[text()=' Изменить']")
+    private WebElement profileLinkEditAddress1Text;
+    @FindBy(xpath = "//div[@id='popup-address']//*[text()='Добавить адрес доставки'][@data-type='ADD']")
+    private WebElement profileAddNewAddressPopupTitle;
+    @FindBy(xpath = "//div[@id='popup-address']//*[@class='icon icon--close']")
+    private WebElement profileAddressPopupCloseBtn;
+    @FindBy(xpath = "//div[@id='popup-address']//*[@data-js='dadata']//input[@data-field='fulladdress']")
+    private WebElement profileAddNewAddressPopupFulladdressInput;
+    @FindBy(xpath = "//div[@id='popup-address']//button[@type='submit'][@disabled][text()='Сохранить']")
+    private WebElement popupProfileAddNewAddressSubmitBtnDisabled;
+    @FindBy(xpath = "//div[@id='popup-address']//*[text()='Адрес доставки'][@data-type='EDIT']")
+    private WebElement profileEditAddressPopupTitle;
 
 
+    @FindBy(xpath = "//*[@class='btn btn--block btn--name']")
+    private WebElement editProfileInfoBtn;
+    @FindBy(xpath = "//*[@id='popup-profile-change']/h2[text()='Персональные данные']")
+    private WebElement popupEditProfileInfoTitle;
+    @FindBy(xpath = "//*[@id='popup-profile-change']//label[text()='Имя']")
+    private WebElement popupEditProfileInfoLabelName;
+    @FindBy(xpath = "//*[@id='popup-profile-change']//input[@name='firstName']")
+    private WebElement popupEditProfileInfoInputName;
+    @FindBy(xpath = "//*[@id='popup-profile-change']//label[text()='Фамилия']")
+    private WebElement popupEditProfileInfoLabelSurname;
+    @FindBy(xpath = "//*[@id='popup-profile-change']//input[@name='lastName']")
+    private WebElement popupEditProfileInfoInputSurname;
+    @FindBy(xpath = "//*[@id='popup-profile-change']//label[text()='Дата рождения']")
+    private WebElement popupEditProfileInfoLabelBirthday;
+    @FindBy(xpath = "//*[@id='popup-profile-change']//input[@name='birthDate']")
+    private WebElement popupEditProfileInfoInputBirthdate;
+    @FindBy(xpath = "//*[@id='popup-profile-change']//*[@class='input-wrapper__icon input-wrapper__icon--calendar']")
+    private WebElement popupEditProfileInfoCalendar;
+    @FindBy(xpath = "//*[@id='ui-datepicker-div']//*[@data-handler='selectYear']")
+    private WebElement popupEditProfileInfoSelectYear;
+    @FindBy(xpath = "//*[@id='ui-datepicker-div']//*[@data-handler='selectYear']/*[text()='1974']")
+    private WebElement popupEditProfileInfoOption1974;
+    @FindBy(xpath = "//*[@id='ui-datepicker-div']//*[@data-handler='selectMonth']/*[text()='Oct']")
+    private WebElement popupEditProfileInfoOptionOctober;
+    @FindBy(xpath = "//*[@id='ui-datepicker-div']//td[@data-handler='selectDay']/*[text()='10']")
+    private WebElement popupEditProfileInfoOptionDay10;
+    @FindBy(xpath = "//*[@id='ui-datepicker-div']//td[@data-handler='selectDay']/*[text()='12']")
+    private WebElement popupEditProfileInfoOptionDay12;
+    @FindBy(xpath = "//*[@id='popup-profile-change']//label[text()='Пол']")
+    private WebElement popupEditProfileInfoLabelGender;
+    @FindBy(xpath = "//*[@id='popup-profile-change']//span[@class='select2-selection__arrow']")
+    private WebElement popupEditProfileInfoGenderSelectArrow;
+    @FindBy(xpath = "//ul[@class='select2-results__options']/li[text()='Мужской']")
+    private WebElement popupEditProfileInfoGenderSelectMale;
+    @FindBy(xpath = "//ul[@class='select2-results__options']/li[text()='Женский']")
+    private WebElement popupEditProfileInfoGenderSelectFemale;
+    @FindBy(xpath = "//*[@id='popup-profile-change']//label[text()='Телефон']")
+    private WebElement popupEditProfileInfoLabelPhone;
+    @FindBy(xpath = "//*[@id='popup-profile-change']//input[@name='phoneContactInfo.mobileNumber']")
+    private WebElement popupEditProfileInfoInputPhone;
+    @FindBy(xpath = "//*[@id='popup-profile-change']//label[text()='Email']")
+    private WebElement popupEditProfileInfoLabelEmail;
+    @FindBy(xpath = "//*[@id='popup-profile-change']//label[text()='Я согласен получать SMS-рассылки']")
+    private WebElement popupEditProfileInfoLabelSmsConfirmation;
+    @FindBy(xpath = "//*[@id='popup-profile-change']//label[text()='Подписка на новости']")
+    private WebElement popupEditProfileInfoLabelEmailConfirmation;
+    @FindBy(xpath = "//*[@id='popup-profile-change']//*[@name='emailConfirmation']")
+    private WebElement popupEditProfileInfoCheckboxEmailConfirmation;
+    @FindBy(xpath = "//*[@id='popup-profile-change']//*[@name='smsConfirmation']")
+    private WebElement popupEditProfileInfoCheckboxSmsConfirmation;
+    @FindBy(xpath = "//*[@id='popup-profile-change']//button[@type='submit']")
+    private WebElement popupEditProfileInfoSubmitBtn;
+    @FindBy(xpath = "//*[@id='popup-profile-change']//span[@data-popup='close']")
+    private WebElement popupEditProfileInfoCloseBtn;
 
 
+    @FindBy(xpath = "//*[@class='profile-info profile-block__item profile-block__item--pd']")
+    private List<WebElement> profileInfoBlock;
+    @FindBy(xpath = "//*[@class='profile-info__block']//*[@data-profile-field='firstName']")
+    private WebElement profileInfoFirstName;
+    @FindBy(xpath = "//*[@class='profile-info__block']//*[@data-profile-field='lastName']")
+    private WebElement profileInfoLastName;
+    @FindBy(xpath = "//*[@class='profile-info__block']//*[@data-profile-field='birthDate']")
+    private WebElement profileInfoBirthDate;
+    @FindBy(xpath = "//*[@class='profile-info__block']//*[@data-profile-field='gender']")
+    private WebElement profileInfoGender;
 
 
     //Constructor
-    public PagesMyAccount(WebDriver driver){
-        this.driver=driver;
+    public PagesMyAccount(WebDriver driver) {
+        this.driver = driver;
         //Initialise Elements
         PageFactory.initElements(driver, this);
     }
@@ -123,16 +193,15 @@ public class PagesMyAccount {
     //СОЗДАТЬ ОБЪЕКТ PagesMyAccount //PagesMyAccount pagesMyAccount = new PagesMyAccount(driver);
 
     //есть крошка Главная //pagesMyAccount.isBreadcrumb1();
-    public void isBreadcrumb1(){
+    public void isBreadcrumb1() {
         String breadcrumb1_text = breadcrumb1.getText();
-            Assert.assertEquals(breadcrumb1_text, "Главная");
-        Boolean isBreadcrumb1_url = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.attributeContains(breadcrumb1,"href",".ru/"));
+        Assert.assertEquals(breadcrumb1_text, "Главная");
+        Boolean isBreadcrumb1_url = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.attributeContains(breadcrumb1, "href", ".ru/"));
         /*String breadcrumb1_url = breadcrumb1.getAttribute("href");
          Assert.assertEquals(breadcrumb1_url, "https://bi-bi.ru/");*/
         String breadcrumb1_itemprop = breadcrumb1.getAttribute("itemprop");
-            Assert.assertEquals(breadcrumb1_itemprop, "item");
+        Assert.assertEquals(breadcrumb1_itemprop, "item");
     }
-
 
 
     //====== СТРАНИЦА ПРОФИЛЯ ===========
@@ -141,242 +210,242 @@ public class PagesMyAccount {
     //СОЗДАТЬ ОБЪЕКТ PagesMyAccount //PagesMyAccount pagesMyAccount = new PagesMyAccount(driver);
 
     //открывается страница ЛК //pagesMyAccount.isPageProfileInfoToBe();
-    public void isPageProfileInfoToBe(){
-        List<WebElement> isProfileNavBlockVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOfAllElements(profile_lc_nav_block));
-        List<WebElement> isProfileInfoBlockVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOfAllElements(profile_info_block));
-        List<WebElement> isProfileMapVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOfAllElements(profile_map_block));
-        List<WebElement> isFavoriteStoreVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOfAllElements(profile_favorite_store_block));
-        List<WebElement> isProfileAddressVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOfAllElements(profile_address_block));
-        Boolean profilePageCurrentUrl  = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.urlContains("/my-account/profile"));
+    public void isPageProfileInfoToBe() {
+        List<WebElement> isProfileNavBlockVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOfAllElements(profileLcNavBlock));
+        List<WebElement> isProfileInfoBlockVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOfAllElements(profileInfoBlock));
+        List<WebElement> isProfileMapVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOfAllElements(profileMapBlock));
+        List<WebElement> isFavoriteStoreVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOfAllElements(profileFavoriteStoreBlock));
+        List<WebElement> isProfileAddressVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOfAllElements(profileAddressBlock));
+        Boolean profilePageCurrentUrl = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.urlContains("/my-account/profile"));
         /*String myAccountProfileUrl = driver.getCurrentUrl();  Assert.assertEquals(myAccountProfileUrl, "https://bi-bi.ru/my-account/profile");*/
         String breadcrumb2_class_active = navLinkProfile.getAttribute("class");
-            Assert.assertEquals(breadcrumb2_class_active, "link link--black lc-nav__link is-active");
+        Assert.assertEquals(breadcrumb2_class_active, "link link--black lc-nav__link is-active");
     }
 
     //есть крошка Профиль, в навигации выделена соотв. ссылка//pagesMyAccount.isBreadcrumb2Profile();
-    public void isBreadcrumb2Profile(){
+    public void isBreadcrumb2Profile() {
         String breadcrumb1_text = breadcrumb2.getText();
-            Assert.assertEquals(breadcrumb1_text, "Профиль");
+        Assert.assertEquals(breadcrumb1_text, "Профиль");
     }
 
     //кликнуть Сменить магазин //pagesMyAccount.clickChangeStoreFromProfile();
-    public void clickChangeStoreFromProfile(){profile_change_store_btn.click();}
+    public void clickChangeStoreFromProfile() {
+        profileChangeStoreBtn.click();
+    }
 
     //закрыть открывшуюся карту крестиком //pagesMyAccount.clickClosePopupLocationBtn();
-    public void clickClosePopupLocationBtn(){ close_popup_map_delivery_new_btn.click(); }
-
-
-
-
+    public void clickClosePopupLocationBtn() {
+        closePopupMapDeliveryNewBtn.click();
+    }
 
 
     //карта закрылась //Assert.assertTrue(pagesMyAccount.isProfileMapShopsInvisible());
-    public boolean isProfileMapShopsInvisible(){
-        Boolean profileMapShopsInvisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.not(ExpectedConditions.visibilityOf(profile_map_shops)));
+    public boolean isProfileMapShopsInvisible() {
+        Boolean profileMapShopsInvisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.not(ExpectedConditions.visibilityOf(profileMapShops)));
         return true;
     }
 
 
-
     //страница профиля > блок Магазин самовывоза > кликнуть Сменить магазин > выбрать из списка на карте Полбина,6 > магаз сменился в шапке и в блоке профиля (только для БР МСК)//pagesMyAccount.changeStoreFromProfile();
     public void setStore020FromProfile() throws InterruptedException {
-        profile_change_store_btn.click();
-        boolean profile_map_shopsDisplayed;
-        if (profile_map_shops.isDisplayed()) {
-            profile_map_shopsDisplayed = true;
-        } else profile_map_shopsDisplayed = false;
-        WebElement isMapChangeStoreFromProfileVisible = new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOf(profile_map_shop_title));
+        profileChangeStoreBtn.click();
+        boolean profileMapShopsDisplayed;
+        if (profileMapShops.isDisplayed()) {
+            profileMapShopsDisplayed = true;
+        } else profileMapShopsDisplayed = false;
+        WebElement isMapChangeStoreFromProfileVisible = new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOf(profileMapShopTitle));
         Thread.sleep(500);
         Actions action_write_us = new Actions(driver);
-            action_write_us.moveToElement(profile_map_shop_pos_020_btn).click().perform();
-        Boolean isNameOfStore020InProfile = new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.attributeContains(name_of_store_in_profile, "textContent", "Москва Полбина"));
-        Boolean isNameOfStore020InHeader = new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.attributeContains(name_of_store_in_header, "textContent", "Москва Полбина"));
-       }
+        action_write_us.moveToElement(profileMapShopPos020Btn).click().perform();
+        Boolean isNameOfStore020InProfile = new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.attributeContains(nameOfStoreInProfile, "textContent", "Москва Полбина"));
+        Boolean isNameOfStore020InHeader = new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.attributeContains(nameOfStoreInHeader, "textContent", "Москва Полбина"));
+    }
 
 
     //нажать на кнопку Редактировать данные > откроется форма (проверка по заголовку) //pagesMyAccount.clickOnEditProfileInfoBtn();
-    public void clickOnEditProfileInfoBtn(){
-        edit_profile_info_btn.click();
-        WebElement isPopupEditProfileInfoTitleVisible = new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOf(popup_edit_profile_info_title));
+    public void clickOnEditProfileInfoBtn() {
+        editProfileInfoBtn.click();
+        WebElement isPopupEditProfileInfoTitleVisible = new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOf(popupEditProfileInfoTitle));
     }
-
 
 
     //кликнуть Редактировать данные //pagesMyAccount.editInfoFromProfile();
-    public void editInfoFromProfile(){
-        edit_profile_info_btn.click();
+    public void editInfoFromProfile() {
+        editProfileInfoBtn.click();
     }
 
     //открывается форма редактирования личных данных //pagesMyAccount.isPopupEditProfileInfoToBe();
-    public void isPopupEditProfileInfoToBe(){
-        WebElement isPopupEditProfileInfoTitleVisible = new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOf(popup_edit_profile_info_title));
-        WebElement isPopupEditProfileInfoLabelNameVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popup_edit_profile_info_label_name));
-        WebElement isPopupEditProfileInfoLabelSurnameVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popup_edit_profile_info_label_surname));
-        WebElement isPopupEditProfileInfoLabelBirthdayVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popup_edit_profile_info_label_birthday));
-        WebElement isPopupEditProfileInfoCalendarVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popup_edit_profile_info_calendar));
-        WebElement isPopupEditProfileInfoLabelGenderVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popup_edit_profile_info_label_gender));
-        WebElement isPopupEditProfileInfoLabelPhoneVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popup_edit_profile_info_label_phone));
-        WebElement isPopupEditProfileInfoLabelEmailVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popup_edit_profile_info_label_email));
-        WebElement isPopupEditProfileInfoLabelSmsConfirmationVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popup_edit_profile_info_label_sms_confirmation));
-        WebElement isPopupEditProfileInfoCheckboxSmsConfirmationSelected = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popup_edit_profile_info_checkbox_sms_confirmation));
-        WebElement isPopupEditProfileInfoLabelEmailConfirmationVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popup_edit_profile_info_label_email_confirmation));
-        WebElement isPopupEditProfileInfoCheckboxEmailConfirmationSelected = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popup_edit_profile_info_checkbox_email_confirmation));
-        WebElement isPopupEditProfileInfoSubmitBtnVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popup_edit_profile_info_submit_btn));
-        WebElement isPopupEditProfileInfoCloseBtnVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popup_edit_profile_info_close_btn));
+    public void isPopupEditProfileInfoToBe() {
+        WebElement isPopupEditProfileInfoTitleVisible = new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOf(popupEditProfileInfoTitle));
+        WebElement isPopupEditProfileInfoLabelNameVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popupEditProfileInfoLabelName));
+        WebElement isPopupEditProfileInfoLabelSurnameVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popupEditProfileInfoLabelSurname));
+        WebElement isPopupEditProfileInfoLabelBirthdayVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popupEditProfileInfoLabelBirthday));
+        WebElement isPopupEditProfileInfoCalendarVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popupEditProfileInfoCalendar));
+        WebElement isPopupEditProfileInfoLabelGenderVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popupEditProfileInfoLabelGender));
+        WebElement isPopupEditProfileInfoLabelPhoneVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popupEditProfileInfoLabelPhone));
+        WebElement isPopupEditProfileInfoLabelEmailVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popupEditProfileInfoLabelEmail));
+        WebElement isPopupEditProfileInfoLabelSmsConfirmationVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popupEditProfileInfoLabelSmsConfirmation));
+        WebElement isPopupEditProfileInfoCheckboxSmsConfirmationSelected = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popupEditProfileInfoCheckboxSmsConfirmation));
+        WebElement isPopupEditProfileInfoLabelEmailConfirmationVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popupEditProfileInfoLabelEmailConfirmation));
+        WebElement isPopupEditProfileInfoCheckboxEmailConfirmationSelected = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popupEditProfileInfoCheckboxEmailConfirmation));
+        WebElement isPopupEditProfileInfoSubmitBtnVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popupEditProfileInfoSubmitBtn));
+        WebElement isPopupEditProfileInfoCloseBtnVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popupEditProfileInfoCloseBtn));
     }
 
     //закрыть форму редактирования личных данных > форма закрылась //pagesMyAccount.closePopupEditProfileInfo();
-    public void closePopupEditProfileInfo(){
-        popup_edit_profile_info_close_btn.click();
-        Boolean titlePopupEditProfileInfoInvisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.not(ExpectedConditions.visibilityOf(popup_edit_profile_info_title)));
+    public void closePopupEditProfileInfo() {
+        popupEditProfileInfoCloseBtn.click();
+        Boolean titlePopupEditProfileInfoInvisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.not(ExpectedConditions.visibilityOf(popupEditProfileInfoTitle)));
     }
 
     //форма редактирования личных данных закрылась //pagesMyAccount.isTitlePopupEditProfileInfoInvisible();
-    public void isTitlePopupEditProfileInfoInvisible(){
-        Boolean titlePopupEditProfileInfoInvisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.not(ExpectedConditions.visibilityOf(popup_edit_profile_info_title)));
+    public void isTitlePopupEditProfileInfoInvisible() {
+        Boolean titlePopupEditProfileInfoInvisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.not(ExpectedConditions.visibilityOf(popupEditProfileInfoTitle)));
     }
 
     //заполнить поле Имя формы редактирования данных //pagesMyAccount.inputNameToProfileInfo();
-    public void inputNameToProfileInfo(String NameToProfileInfo){
-        popup_edit_profile_info_input_name.clear();
-        popup_edit_profile_info_input_name.sendKeys(NameToProfileInfo);
+    public void inputNameToProfileInfo(String NameToProfileInfo) {
+        popupEditProfileInfoInputName.clear();
+        popupEditProfileInfoInputName.sendKeys(NameToProfileInfo);
     }
 
     //заполнить поле Фамилия формы редактирования данных //pagesMyAccount.inputSurnameToProfileInfo();
-    public void inputSurnameToProfileInfo(String SurnameToProfileInfo){
-        popup_edit_profile_info_input_surname.clear();
-        popup_edit_profile_info_input_surname.sendKeys(SurnameToProfileInfo);
+    public void inputSurnameToProfileInfo(String SurnameToProfileInfo) {
+        popupEditProfileInfoInputSurname.clear();
+        popupEditProfileInfoInputSurname.sendKeys(SurnameToProfileInfo);
     }
 
     //выбрать пол - Женский в форме редактирования данных //pagesMyAccount.selectGenderFemaleToProfileInfo();
-    public void selectGenderFemaleToProfileInfo(){
-        popup_edit_profile_info_gender_select_arrow.click();
-        Actions action_write_us = new Actions(driver);
-        action_write_us.moveToElement(popup_edit_profile_info_gender_select_female).click().perform();
+    public void selectGenderFemaleToProfileInfo() {
+        popupEditProfileInfoGenderSelectArrow.click();
+        Actions actionWriteUs = new Actions(driver);
+        actionWriteUs.moveToElement(popupEditProfileInfoGenderSelectFemale).click().perform();
     }
 
 
     //выбрать пол - Мужской в форме редактирования данных //pagesMyAccount.selectGenderMaleToProfileInfo();
-    public void selectGenderMaleToProfileInfo(){
-        popup_edit_profile_info_gender_select_arrow.click();
-        Actions action_write_us = new Actions(driver);
-        action_write_us.moveToElement(popup_edit_profile_info_gender_select_male).click().perform();
+    public void selectGenderMaleToProfileInfo() {
+        popupEditProfileInfoGenderSelectArrow.click();
+        Actions actionWriteUs = new Actions(driver);
+        actionWriteUs.moveToElement(popupEditProfileInfoGenderSelectMale).click().perform();
     }
 
 
     //редактировать дату рождения цифрами в форме редактирования данных //pagesMyAccount.editBirthDateToProfileInfo();
-    public void editBirthDateToProfileInfo1(String new_birthday, String new_birthmonth, String new_birthyear, String new_birthdate_all){
-        popup_edit_profile_info_input_birthdate.clear();
-        Actions action_set_new_birthday = new Actions(driver);
-            action_set_new_birthday.moveToElement(popup_edit_profile_info_input_birthdate)
-                .sendKeys(popup_edit_profile_info_input_birthdate, new_birthday).perform();
-        Actions action_set_new_birthmonth = new Actions(driver);
-            action_set_new_birthmonth.moveToElement(popup_edit_profile_info_input_birthdate)
-                .sendKeys(popup_edit_profile_info_input_birthdate, new_birthmonth).perform();
-        Actions action_set_new_birthyear = new Actions(driver);
-            action_set_new_birthyear.moveToElement(popup_edit_profile_info_input_birthdate)
-                .sendKeys(popup_edit_profile_info_input_birthdate, new_birthyear).perform();
-        popup_edit_profile_info_input_surname.click();
-        Boolean hasBirthDateValue = new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.attributeToBe(popup_edit_profile_info_input_birthdate, "value", new_birthdate_all));
+    public void editBirthDateToProfileInfo1(String new_birthday, String new_birthmonth, String new_birthyear, String new_birthdate_all) {
+        popupEditProfileInfoInputBirthdate.clear();
+        Actions actionSetNewBirthday = new Actions(driver);
+        actionSetNewBirthday.moveToElement(popupEditProfileInfoInputBirthdate)
+                .sendKeys(popupEditProfileInfoInputBirthdate, new_birthday).perform();
+        Actions actionSetNewBirthmonth = new Actions(driver);
+        actionSetNewBirthmonth.moveToElement(popupEditProfileInfoInputBirthdate)
+                .sendKeys(popupEditProfileInfoInputBirthdate, new_birthmonth).perform();
+        Actions actionSetNewBirthyear = new Actions(driver);
+        actionSetNewBirthyear.moveToElement(popupEditProfileInfoInputBirthdate)
+                .sendKeys(popupEditProfileInfoInputBirthdate, new_birthyear).perform();
+        popupEditProfileInfoInputSurname.click();
+        Boolean hasBirthDateValue = new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.attributeToBe(popupEditProfileInfoInputBirthdate, "value", new_birthdate_all));
     }
 
     //редактировать дату рождения цифрами в форме редактирования данных (не работает) //pagesMyAccount.editBirthDateToProfileInfo1();
     public void editBirthDateToProfileInfo1(String new_birtdate, String new_birthdate_with_points) throws InterruptedException {
-        popup_edit_profile_info_input_birthdate.clear();
+        popupEditProfileInfoInputBirthdate.clear();
         Thread.sleep(100);
-        popup_edit_profile_info_input_birthdate.sendKeys(new_birtdate);
-        Actions action_set_new_birthdate = new Actions(driver);
-            action_set_new_birthdate.moveToElement(popup_edit_profile_info_input_birthdate).sendKeys(popup_edit_profile_info_input_birthdate, new_birtdate).perform();
+        popupEditProfileInfoInputBirthdate.sendKeys(new_birtdate);
+        Actions actionSetNewBirthdate = new Actions(driver);
+        actionSetNewBirthdate.moveToElement(popupEditProfileInfoInputBirthdate).sendKeys(popupEditProfileInfoInputBirthdate, new_birtdate).perform();
         Thread.sleep(10000);
-        //popup_edit_profile_info_input_surname.click();
-        Boolean hasBirthDateValue = new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.attributeToBe(popup_edit_profile_info_input_birthdate, "value", new_birthdate_with_points));
+        popupEditProfileInfoInputSurname.click();
+        Boolean hasBirthDateValue = new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.attributeToBe(popupEditProfileInfoInputBirthdate, "value", new_birthdate_with_points));
     }
 
     //редактировать дату рождения в форме редактирования данных кликами в календаре //pagesMyAccount.editBirthDateToProfileInfo();
     public void editBirthDateToProfileInfo() throws InterruptedException {
-        popup_edit_profile_info_input_birthdate.click();
-        popup_edit_profile_info_select_year.click();
-        popup_edit_profile_info_option_1974.click();
-        popup_edit_profile_info_option_October.click();
-        popup_edit_profile_info_option_day10.click();
-        Boolean hasBirthDateValue = new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.attributeToBe(popup_edit_profile_info_input_birthdate, "value", "10.10.1974"));
+        popupEditProfileInfoInputBirthdate.click();
+        popupEditProfileInfoSelectYear.click();
+        popupEditProfileInfoOption1974.click();
+        popupEditProfileInfoOptionOctober.click();
+        popupEditProfileInfoOptionDay10.click();
+        Boolean hasBirthDateValue = new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.attributeToBe(popupEditProfileInfoInputBirthdate, "value", "10.10.1974"));
     }
 
     //кликнуть Сохранить в форме редактирования //pagesMyAccount.editProfileInfoSubmit();
-    public void editProfileInfoSubmit(){popup_edit_profile_info_submit_btn.click();}
+    public void editProfileInfoSubmit() {
+        popupEditProfileInfoSubmitBtn.click();
+    }
 
     //проверить, что личные данные юзера сохранились //pagesMyAccount.checkProfileInfoUpdate();
-    public void checkProfileInfoUpdate(){
-        Boolean hasFirstNameText = new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.attributeToBe(profile_info_firstName, "textContent", "Татьянa"));
-        Boolean hasLastNameText = new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.attributeToBe(profile_info_lastName, "textContent", "Patutina"));
-        Boolean hasBirthDateText = new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.attributeToBe(profile_info_birthDate, "textContent", "10.10.1974"));
-        Boolean hasGenderText = new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.attributeToBe(profile_info_gender, "textContent", "Женский"));
+    public void checkProfileInfoUpdate() {
+        Boolean hasFirstNameText = new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.attributeToBe(profileInfoFirstName, "textContent", "Татьянa"));
+        Boolean hasLastNameText = new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.attributeToBe(profileInfoLastName, "textContent", "Patutina"));
+        Boolean hasBirthDateText = new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.attributeToBe(profileInfoBirthDate, "textContent", "10.10.1974"));
+        Boolean hasGenderText = new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.attributeToBe(profileInfoGender, "textContent", "Женский"));
     }
 
 
     //кликнуть Сменить пароль //pagesMyAccount.clickChangePassBtnInProfile();
-    public void clickChangePassBtnInProfile(){popup_profile_change_pass_btn.click();}
+    public void clickChangePassBtnInProfile() {
+        popupProfileChangePassBtn.click();
+    }
 
     //открылась форма смены пароля //pagesMyAccount.isPopupChangePassInProfileToBe();
-    public void isPopupChangePassInProfileToBe(){
-        WebElement isPopupChangePassInProfileTitleVisible = new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOf(popup_profile_change_pass_title));
-        WebElement isPopupChangePassInProfileLabelOldPassVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popup_profile_change_pass_label_old_pass));
-        WebElement isPopupChangePassInProfileInputCurrentPassClickable  = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.elementToBeClickable(popup_profile_change_pass_input_current_pass));
-        WebElement isPopupChangePassInProfileLabelNewPassVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popup_profile_change_pass_label_new_pass));
-        WebElement isPopupChangePassInProfileInputNewPassClickable  = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.elementToBeClickable(popup_profile_change_pass_input_new_pass));
-        WebElement isPopupChangePassInProfileLabelCheckNewPassVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popup_profile_change_pass_label_check_new_pass));
-        WebElement isPopupChangePassInProfileInputCheckNewPassClickable  = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.elementToBeClickable(popup_profile_change_pass_input_check_new_pass));
-        WebElement isPopupChangePassInProfileDisabledBtnSubmitVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popup_profile_change_pass_submit_btn_disabled));
+    public void isPopupChangePassInProfileToBe() {
+        WebElement isPopupChangePassInProfileTitleVisible = new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOf(popupProfileChangePassTitle));
+        WebElement isPopupChangePassInProfileLabelOldPassVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popupProfileChangePassLabelOldPass));
+        WebElement isPopupChangePassInProfileInputCurrentPassClickable = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.elementToBeClickable(popupProfileChangePassInputCurrentPass));
+        WebElement isPopupChangePassInProfileLabelNewPassVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popupProfileChangePassLabelNewPass));
+        WebElement isPopupChangePassInProfileInputNewPassClickable = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.elementToBeClickable(popupProfileChangePassInputNewPass));
+        WebElement isPopupChangePassInProfileLabelCheckNewPassVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popupProfileChangePassLabelCheckNewPass));
+        WebElement isPopupChangePassInProfileInputCheckNewPassClickable = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.elementToBeClickable(popupProfileChangePassInputCheckNewPass));
+        WebElement isPopupChangePassInProfileDisabledBtnSubmitVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popupProfileChangePassSubmitBtnDisabled));
     }
 
     //закрыть форму пароля крестиком > форма закрылась //pagesMyAccount.closePopupChangePassInProfile();
-    public void closePopupChangePassInProfile(){
-        popup_profile_change_pass_close_btn.click();
-        Boolean titlePopupChangePassInvisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.not(ExpectedConditions.visibilityOf(popup_profile_change_pass_title)));
+    public void closePopupChangePassInProfile() {
+        popupProfileChangePassCloseBtn.click();
+        Boolean titlePopupChangePassInvisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.not(ExpectedConditions.visibilityOf(popupProfileChangePassTitle)));
     }
 
     //форма редактирования пароля закрылась //pagesMyAccount.isTitlePopupChangePassInvisible();
-    public void isTitlePopupChangePassInvisible(){
-        Boolean titlePopupChangePassInvisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.not(ExpectedConditions.visibilityOf(popup_profile_change_pass_title)));
+    public void isTitlePopupChangePassInvisible() {
+        Boolean titlePopupChangePassInvisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.not(ExpectedConditions.visibilityOf(popupProfileChangePassTitle)));
     }
 
     //кликнуть Добавить новый адрес //pagesMyAccount.addNewAddressInProfilePage();
-    public void addNewAddressInProfilePage(){profile_add_new_address_btn.click();}
+    public void addNewAddressInProfilePage() {
+        profileAddNewAddressBtn.click();
+    }
 
     //открылась форма добавления нового адреса //pagesMyAccount.isPopupAddNewAddressInProfileToBe();
-    public void isPopupAddNewAddressInProfileToBe(){
-        WebElement isPopupAddNewAddressInProfileTitleVisible = new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOf(profile_add_new_address_popup_title));
-        WebElement isPopupAddNewAddressInProfileFulladdressInputVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(profile_add_new_address_popup_fulladdress_input));
-        WebElement isPopupAddNewAddressInProfileDisabledBtnSubmitVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popup_profile_add_new_address_submit_btn_disabled));
+    public void isPopupAddNewAddressInProfileToBe() {
+        WebElement isPopupAddNewAddressInProfileTitleVisible = new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOf(profileAddNewAddressPopupTitle));
+        WebElement isPopupAddNewAddressInProfileFulladdressInputVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(profileAddNewAddressPopupFulladdressInput));
+        WebElement isPopupAddNewAddressInProfileDisabledBtnSubmitVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popupProfileAddNewAddressSubmitBtnDisabled));
     }
 
     //закрыть форму добавления нового адреса крестиком > форма закрылась //pagesMyAccount.closePopupAddNewAddressInProfile();
-    public void closePopupAddNewAddressInProfile(){
-        profile_address_popup_close_btn.click();
-        Boolean titlePopupAddNewAddressInvisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.not(ExpectedConditions.visibilityOf(profile_add_new_address_popup_title)));
+    public void closePopupAddNewAddressInProfile() {
+        profileAddressPopupCloseBtn.click();
+        Boolean titlePopupAddNewAddressInvisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.not(ExpectedConditions.visibilityOf(profileAddNewAddressPopupTitle)));
     }
 
     //кликнуть на иконку Изменить адрес у первого адреса //pagesMyAccount.clickToIconEditAddress1FromProfilePage();
-    public void clickToIconEditAddress1FromProfilePage(){ profile_edit_address1_icon.click();  }
+    public void clickToIconEditAddress1FromProfilePage() {
+        profileEditAddress1Icon.click();
+    }
 
     //открылась форма редактирования адреса //pagesMyAccount.isPopupEditAddressInProfileToBe();
-    public void isPopupEditAddressInProfileToBe(){
-        WebElement isPopupEditAddressInProfileTitleVisible = new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOf(profile_edit_address_popup_title));
-        WebElement isPopupAddNewAddressInProfileFulladdressInputVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(profile_add_new_address_popup_fulladdress_input));
-        WebElement isPopupAddNewAddressInProfileDisabledBtnSubmitVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popup_profile_add_new_address_submit_btn_disabled));
+    public void isPopupEditAddressInProfileToBe() {
+        WebElement isPopupEditAddressInProfileTitleVisible = new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOf(profileEditAddressPopupTitle));
+        WebElement isPopupAddNewAddressInProfileFulladdressInputVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(profileAddNewAddressPopupFulladdressInput));
+        WebElement isPopupAddNewAddressInProfileDisabledBtnSubmitVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(popupProfileAddNewAddressSubmitBtnDisabled));
     }
 
     //закрыть форму редактирования адреса крестиком > форма закрылась //pagesMyAccount.closePopupEditAddressInProfile();
-    public void closePopupEditAddressInProfile(){
-        profile_address_popup_close_btn.click();
-        Boolean titlePopupAddNewAddressInvisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.not(ExpectedConditions.visibilityOf(profile_edit_address_popup_title)));
+    public void closePopupEditAddressInProfile() {
+        profileAddressPopupCloseBtn.click();
+        Boolean titlePopupAddNewAddressInvisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.not(ExpectedConditions.visibilityOf(profileEditAddressPopupTitle)));
     }
-
-
-
-
-
-
 
 
     //====== СТРАНИЦА МОЙ ГАРАЖ ===========
@@ -385,14 +454,13 @@ public class PagesMyAccount {
     //создать объект  PagesMyAccount //PagesMyAccount pagesMyAccount = new PagesMyAccount(driver);
 
     //есть крошка Мой Гараж, в навигации выделена соотв. ссылка //pagesMyAccount.isBreadcrumb2Garage();
-    public void isBreadcrumb2Garage(){
-        String breadcrumb1_text = breadcrumb2.getText();
-            Assert.assertEquals(breadcrumb1_text, "Мой Гараж");
-        Boolean garagePageCurrentUrl  = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.urlContains("/my-account/garage"));
-        String breadcrumb2_class_active = navLinkMyGarage.getAttribute("class");
-            Assert.assertEquals(breadcrumb2_class_active, "link link--black lc-nav__link is-active");
+    public void isBreadcrumb2Garage() {
+        String breadcrumb1Text = breadcrumb2.getText();
+        Assert.assertEquals(breadcrumb1Text, "Мой Гараж");
+        Boolean garagePageCurrentUrl = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.urlContains("/my-account/garage"));
+        String breadcrumb2ClassActive = navLinkMyGarage.getAttribute("class");
+        Assert.assertEquals(breadcrumb2ClassActive, "link link--black lc-nav__link is-active");
     }
-
 
 
     //====== СТРАНИЦА ИЗБРАННОЕ В ЛК ===========
@@ -401,14 +469,13 @@ public class PagesMyAccount {
     //создать объект  PagesMyAccount //PagesMyAccount pagesMyAccount = new PagesMyAccount(driver);
 
     //есть крошка Избранное, в навигации выделена соотв. ссылка //pagesMyAccount.isBreadcrumb2Favorite();
-    public void isBreadcrumb2Favorite(){
-        String breadcrumb1_text = breadcrumb2.getText();
-            Assert.assertEquals(breadcrumb1_text, "Избранное");
-        Boolean favoritePageCurrentUrl  = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.urlContains("/my-account/favorite"));
-        String breadcrumb2_class_active = navLinkFavorite.getAttribute("class");
-            Assert.assertEquals(breadcrumb2_class_active, "link link--black lc-nav__link is-active");
+    public void isBreadcrumb2Favorite() {
+        String breadcrumb2Text = breadcrumb2.getText();
+        Assert.assertEquals(breadcrumb2Text, "Избранное");
+        Boolean favoritePageCurrentUrl = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.urlContains("/my-account/favorite"));
+        String breadcrumb2ClassActive = navLinkFavorite.getAttribute("class");
+        Assert.assertEquals(breadcrumb2ClassActive, "link link--black lc-nav__link is-active");
     }
-
 
 
     //====== СТРАНИЦА МОИ БОНУСЫ В ЛК ===========
@@ -417,14 +484,13 @@ public class PagesMyAccount {
     //создать объект  PagesMyAccount //PagesMyAccount pagesMyAccount = new PagesMyAccount(driver);
 
     //есть крошка Мои бонусы, в навигации выделена соотв. ссылка //pagesMyAccount.isBreadcrumb2MyBonuses();
-    public void isBreadcrumb2MyBonuses(){
-        String breadcrumb1_text = breadcrumb2.getText();
-            Assert.assertEquals(breadcrumb1_text, "Мои бонусы");
-        Boolean bonusesPageCurrentUrl  = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.urlContains("/my-account/bonuses"));
-        String breadcrumb2_class_active = navLinkMyBonuses.getAttribute("class");
-            Assert.assertEquals(breadcrumb2_class_active, "link link--black lc-nav__link is-active");
+    public void isBreadcrumb2MyBonuses() {
+        String breadcrumb2Text = breadcrumb2.getText();
+        Assert.assertEquals(breadcrumb2Text, "Мои бонусы");
+        Boolean bonusesPageCurrentUrl = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.urlContains("/my-account/bonuses"));
+        String breadcrumb2ClassActive = navLinkMyBonuses.getAttribute("class");
+        Assert.assertEquals(breadcrumb2ClassActive, "link link--black lc-nav__link is-active");
     }
-
 
 
     //====== СТРАНИЦА ИСТОРИЯ ЗАКАЗОВ В ЛК ===========
@@ -433,14 +499,13 @@ public class PagesMyAccount {
     //создать объект  PagesMyAccount //PagesMyAccount pagesMyAccount = new PagesMyAccount(driver);
 
     //есть крошка История заказов, в навигации выделена соотв. ссылка //pagesMyAccount.isBreadcrumb2MyOrders();
-    public void isBreadcrumb2MyOrders(){
-        String breadcrumb1_text = breadcrumb2.getText();
-            Assert.assertEquals(breadcrumb1_text, "История заказов");
-        Boolean ordersPageCurrentUrl  = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.urlContains("/my-account/orders"));
-        String breadcrumb2_class_active = navLinkOrders.getAttribute("class");
-            Assert.assertEquals(breadcrumb2_class_active, "link link--black lc-nav__link is-active");
+    public void isBreadcrumb2MyOrders() {
+        String breadcrumb2Text = breadcrumb2.getText();
+        Assert.assertEquals(breadcrumb2Text, "История заказов");
+        Boolean ordersPageCurrentUrl = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.urlContains("/my-account/orders"));
+        String breadcrumb2ClassActive = navLinkOrders.getAttribute("class");
+        Assert.assertEquals(breadcrumb2ClassActive, "link link--black lc-nav__link is-active");
     }
-
 
 
     //====== СТРАНИЦА МОИ ОТЗЫВЫ В ЛК ===========
@@ -449,14 +514,13 @@ public class PagesMyAccount {
     //создать объект  PagesMyAccount //PagesMyAccount pagesMyAccount = new PagesMyAccount(driver);
 
     //есть крошка Мои отзывы, в навигации выделена соотв. ссылка //pagesMyAccount.isBreadcrumb2MyReviews();
-    public void isBreadcrumb2MyReviews(){
-        String breadcrumb1_text = breadcrumb2.getText();
-        Assert.assertEquals(breadcrumb1_text, "Мои отзывы");
-        Boolean reviewsPageCurrentUrl  = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.urlContains("/my-account/reviews"));
-        String breadcrumb2_class_active = navLinkMyReviews.getAttribute("class");
-        Assert.assertEquals(breadcrumb2_class_active, "link link--black lc-nav__link is-active");
+    public void isBreadcrumb2MyReviews() {
+        String breadcrumb2Text = breadcrumb2.getText();
+        Assert.assertEquals(breadcrumb2Text, "Мои отзывы");
+        Boolean reviewsPageCurrentUrl = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.urlContains("/my-account/reviews"));
+        String breadcrumb2ClassActive = navLinkMyReviews.getAttribute("class");
+        Assert.assertEquals(breadcrumb2ClassActive, "link link--black lc-nav__link is-active");
     }
-
 
 
     //====== СТРАНИЦА МОИ ОБРАЩЕНИЯ В ЛК ===========
@@ -465,19 +529,13 @@ public class PagesMyAccount {
     //создать объект  PagesMyAccount //PagesMyAccount pagesMyAccount = new PagesMyAccount(driver);
 
     //есть крошка Мои обращения, в навигации выделена соотв. ссылка //pagesMyAccount.isBreadcrumb2MyTickets();
-    public void isBreadcrumb2MyTickets(){
-        String breadcrumb1_text = breadcrumb2.getText();
-        Assert.assertEquals(breadcrumb1_text, "Мои обращения");
-        Boolean ticketsPageCurrentUrl  = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.urlContains("/my-account/tickets"));
-        String breadcrumb2_class_active = navLinkMyTickets.getAttribute("class");
-        Assert.assertEquals(breadcrumb2_class_active, "link link--black lc-nav__link is-active");
+    public void isBreadcrumb2MyTickets() {
+        String breadcrumb2Text = breadcrumb2.getText();
+        Assert.assertEquals(breadcrumb2Text, "Мои обращения");
+        Boolean ticketsPageCurrentUrl = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.urlContains("/my-account/tickets"));
+        String breadcrumb2ClassActive = navLinkMyTickets.getAttribute("class");
+        Assert.assertEquals(breadcrumb2ClassActive, "link link--black lc-nav__link is-active");
     }
-
-
-
-
-
-
 
 
 }

@@ -1,5 +1,5 @@
 //аноним, элементы попапа "Купить" для ассортим.товара Аккумулятор FORSE 60 Ач 600А
-package tests.homePage.positive;
+package tests.homePage;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

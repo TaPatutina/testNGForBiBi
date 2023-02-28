@@ -1,4 +1,4 @@
-package tests.homePage.positive;
+package tests.homePage;
 
 import org.testng.annotations.Test;
 import tests.base.BaseTest;

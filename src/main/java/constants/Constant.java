@@ -12,3 +12,5 @@ public class Constant {
 
     public static final int COUNT_CARDS_IN_LISTING_24 = 24;
 }
+
+

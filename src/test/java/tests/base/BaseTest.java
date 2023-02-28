@@ -1,6 +1,7 @@
 package tests.base;
 
 import common.CommonActions;
+import common.RandomData;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterSuite;
@@ -18,6 +19,7 @@ import static common.Config.HOLD_BROWSER_OPEN;
 
 public class BaseTest {
     protected WebDriver driver = CommonActions.createDriver();
+    protected RandomData randomData = new RandomData(driver);
 
     protected BasePage basePage = new BasePage(driver);
     protected BibiHomePage bibiHomePage = new BibiHomePage(driver);
