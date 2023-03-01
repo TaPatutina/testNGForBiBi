@@ -11,12 +11,13 @@ import java.util.List;
 import static constants.Constant.TimeoutVariable.EXPLICIT_WAIT;
 
 
-
 public class BasePage {
     protected WebDriver driver;
-    public BasePage(WebDriver driver){
+
+    public BasePage(WebDriver driver) {
         this.driver = driver;
     }
+
     public void open(String url) {
         driver.get(url);
     }
@@ -30,6 +31,11 @@ public class BasePage {
     public WebElement waitElementInvisible(WebElement element) {
         new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT)).until(ExpectedConditions.invisibilityOf(element));
         return element;
+    }
+
+    public boolean checkPresenceAttribute(WebElement element, String attribute, String value) {
+        new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT)).until(ExpectedConditions.attributeToBe(element, attribute, value));
+        return true;
     }
 
 

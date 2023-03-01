@@ -12,7 +12,7 @@ import org.testng.Assert;
 import java.time.Duration;
 import java.util.List;
 
-public class ChangeRegion {
+public class Ok_ChangeRegion {
     private WebDriver driver;
 
 
@@ -64,7 +64,7 @@ public class ChangeRegion {
 
 
     //Constructor
-    public ChangeRegion(WebDriver driver){
+    public Ok_ChangeRegion(WebDriver driver){
         this.driver=driver;
         //Initialise Elements
         PageFactory.initElements(driver, this);

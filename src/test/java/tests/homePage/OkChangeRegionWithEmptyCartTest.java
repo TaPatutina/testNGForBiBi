@@ -5,7 +5,7 @@ import tests.base.BaseTest;
 
 import static constants.Constant.Urls.BIBI_HOME_PAGE;
 
-public class ChangeRegionWithEmptyCartTest extends BaseTest {
+public class OkChangeRegionWithEmptyCartTest extends BaseTest {
 
 
     @Test

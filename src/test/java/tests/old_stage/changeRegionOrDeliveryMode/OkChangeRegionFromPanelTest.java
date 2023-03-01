@@ -11,7 +11,7 @@ import pages.old_stage.header.Plashka;
 import java.time.Duration;
 
 
-public class ChangeRegionFromPanelTest {
+public class OkChangeRegionFromPanelTest {
     WebDriver driver;
 
 

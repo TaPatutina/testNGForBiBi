@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import pages.old_stage.header.ChangeRegion;
+import pages.old_stage.header.Ok_ChangeRegion;
 import pages.old_stage.header.Plashka;
 import pages.old_stage.orders.order;
 
@@ -42,9 +42,9 @@ public class order1DomesticProductToStoreOfflinePaymentTest {
             plashka.clickAgreeWithTheCity();
 
             //СОЗДАТЬ ОБЪЕКТ ChangeRegion
-            ChangeRegion changeRegion = new ChangeRegion(driver);
+            Ok_ChangeRegion okChangeRegion = new Ok_ChangeRegion(driver);
             // установить через хедер регион Тверь, магазин Калинина > в хедере отображ Тверь Калинина
-            changeRegion.putFromHeaderTverPos285Kalinina();
+            okChangeRegion.putFromHeaderTverPos285Kalinina();
 
             //СОЗДАТЬ ОБЪЕКТ order
             order order = new order(driver);

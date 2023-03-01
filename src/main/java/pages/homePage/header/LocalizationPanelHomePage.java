@@ -3,6 +3,8 @@ package pages.homePage.header;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import pages.base.BasePage;
 
@@ -11,9 +13,10 @@ import java.util.List;
 public class LocalizationPanelHomePage extends BasePage {
     public LocalizationPanelHomePage(WebDriver driver) {
         super(driver);
+        PageFactory.initElements(driver, this); //для аннотации Селениума @FindBy
     }
 
-    private final By agreeCity_Btn = By.xpath("//div[contains(@data-js, 'sliderPanel')]//button[text()='Да, верно']");
+    @FindBy(xpath ="//div[contains(@data-js, 'sliderPanel')]//button[text()='Да, верно']") private WebElement agreeCityBtn;
     private final By regionPanelElements = By.cssSelector("div.region-panel.fade.show");
     private final By agreeWithTheCityBtn = By.xpath("//div[contains(@data-js,'sliderPanel')]//button[contains(text(),'верно')]");
     private final By regionRequestText = By.xpath("//div[starts-with(@class,'col-12')]/div[@class='h5']");
@@ -26,7 +29,7 @@ public class LocalizationPanelHomePage extends BasePage {
      * Кликнуть "Да" в панели локализации "Ваш город ..?"
      */
     public LocalizationPanelHomePage clickAgreeRegionBtn() {
-        driver.findElement(agreeCity_Btn).click();
+        agreeCityBtn.click();
         return this;
     }
 
@@ -34,7 +37,6 @@ public class LocalizationPanelHomePage extends BasePage {
      * Дождаться появления кнопки "Да, верно" на панели локализации, согласиться с предложенным городом
      */
     public LocalizationPanelHomePage waitAndClickAgreeRegionBtn() {
-        WebElement agreeCityBtn = driver.findElement(agreeCity_Btn);
         waitElementVisible(agreeCityBtn).click();
         Assert.assertFalse(agreeCityBtn.getText().contains("Да, верно"));
         return this;

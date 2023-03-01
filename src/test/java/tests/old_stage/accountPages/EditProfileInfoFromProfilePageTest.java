@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import pages.old_stage.autorization.LoginPage;
+import pages.old_stage.autorization.OldLoginPage;
 import pages.old_stage.autorization.PagesMyAccount;
 import pages.old_stage.header.Plashka;
 
@@ -40,13 +40,13 @@ public class EditProfileInfoFromProfilePageTest {
 
 
             //СОЗДАТЬ ОБЪЕКТ  LoginPage
-            LoginPage loginPage = new LoginPage(driver);
+            OldLoginPage oldLoginPage = new OldLoginPage(driver);
             //кликнуть Войти в шапке > отображается попап авторизации (проверка по заголовку)
-            loginPage.SignInFromHeader();
+            oldLoginPage.SignInFromHeader();
             //залогиниться как tapatutina@ya.ru > отображается кнопка Выйти в хедере
-            loginPage.signInAsTapatutinaYaRu();
+            oldLoginPage.signInAsTapatutinaYaRu();
             //кликнуть на имя профиля в хедере > переход на стр профиля
-            loginPage.clickOnProfileBtn();
+            oldLoginPage.clickOnProfileBtn();
 
 
 

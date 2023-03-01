@@ -6,12 +6,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import pages.old_stage.header.ChangeRegion;
+import pages.old_stage.header.Ok_ChangeRegion;
 import pages.old_stage.header.Plashka;
 
 import java.time.Duration;
 
-public class ChangeRegionEmptyCartTest {
+public class OkChangeRegionEmptyCartTest {
     private WebDriver driver;
 
 
@@ -42,62 +42,62 @@ public class ChangeRegionEmptyCartTest {
 
 
             //СОЗДАТЬ ОБЪЕКТ ChangeRegion
-            ChangeRegion changeRegion = new ChangeRegion(driver);
+            Ok_ChangeRegion okChangeRegion = new Ok_ChangeRegion(driver);
             //в шапке отображается регион Москва
-            String nameOfRegionInHeader = changeRegion.isNameOfRegionInHeader();
+            String nameOfRegionInHeader = okChangeRegion.isNameOfRegionInHeader();
             Assert.assertEquals(nameOfRegionInHeader, "Москва");
             //в шапке по умолчанию отображается способ получения - Самовывоз из магазина
-            String nameOfDeliveryModeInHeader = changeRegion.isNameOfDeliveryModeInHeader();
+            String nameOfDeliveryModeInHeader = okChangeRegion.isNameOfDeliveryModeInHeader();
             Assert.assertEquals(nameOfDeliveryModeInHeader, "Самовывоз из магазина");
             //в шапке по умолчанию отображается магазин СПб. Шлиссельбургский пр-т
-            String nameOfStoreInHeader = changeRegion.isNameOfStoreInHeader();
+            String nameOfStoreInHeader = okChangeRegion.isNameOfStoreInHeader();
             Assert.assertEquals(nameOfStoreInHeader, "Москва Строгинский б-р");
             //кликнуть на регион (город)
-            changeRegion.clickChangeRegionBtn();
+            okChangeRegion.clickChangeRegionBtn();
             // открывается попап локации
-            changeRegion.isElementsOfPopupLocationToBe();
+            okChangeRegion.isElementsOfPopupLocationToBe();
             //попап локализации отображается (проверка по тексту "Выберите город")
-            Assert.assertTrue(changeRegion.isTitleOfPopupLocationVisible());
+            Assert.assertTrue(okChangeRegion.isTitleOfPopupLocationVisible());
             //выбранный в попапе по умолчанию регион - Москва
-            String popupLocationSelectedRegionName = changeRegion.isSelectedRegionName();
+            String popupLocationSelectedRegionName = okChangeRegion.isSelectedRegionName();
             Assert.assertEquals(popupLocationSelectedRegionName, "Москва");
             //кликнуть на Санкт-Петербург
-            changeRegion.clickToRegionLink_SPb();
+            okChangeRegion.clickToRegionLink_SPb();
 
             //в шапке отображается регион СПб
-            String nameOfRegionInHeader2 = changeRegion.isNameOfRegionInHeader();
+            String nameOfRegionInHeader2 = okChangeRegion.isNameOfRegionInHeader();
             Assert.assertEquals(nameOfRegionInHeader2, "Санкт-Петербург");
             //в шапке по умолчанию отображается способ получения - Самовывоз из магазина
-            String nameOfDeliveryModeInHeader2 = changeRegion.isNameOfDeliveryModeInHeader();
+            String nameOfDeliveryModeInHeader2 = okChangeRegion.isNameOfDeliveryModeInHeader();
             Assert.assertEquals(nameOfDeliveryModeInHeader2, "Самовывоз из магазина");
             //в шапке по умолчанию отображается магазин СПб. Шлиссельбургский пр-т
-            String nameOfStoreInHeader2 = changeRegion.isNameOfStoreInHeader();
+            String nameOfStoreInHeader2 = okChangeRegion.isNameOfStoreInHeader();
             Assert.assertEquals(nameOfStoreInHeader2, "СПб. Шлиссельбургский пр-т");
             //попап локализации не отображается
-            Assert.assertFalse(changeRegion.isPopupLocationDisplayed());
+            Assert.assertFalse(okChangeRegion.isPopupLocationDisplayed());
 
 
             //снова кликнуть на город в шапке
-            changeRegion.clickChangeRegionBtn();
+            okChangeRegion.clickChangeRegionBtn();
             //выбранный в попапе по умолчанию регион - Санкт-Петербург
-            String popupLocationSelectedRegionName2 = changeRegion.isSelectedRegionName();
+            String popupLocationSelectedRegionName2 = okChangeRegion.isSelectedRegionName();
             Assert.assertEquals(popupLocationSelectedRegionName2, "Санкт-Петербург");
             //ввести название существующего города в поле поиска в попапе локализации, кликнуть на подсказку - регион в шапке поменяется на выбранный
-            changeRegion.searchAvailableRegion("Лобня");
+            okChangeRegion.searchAvailableRegion("Лобня");
             //попап локализации не отображается
-            Assert.assertFalse(changeRegion.isPopupLocationDisplayed());
+            Assert.assertFalse(okChangeRegion.isPopupLocationDisplayed());
 
 
 
             //снова кликнуть на город в шапке
-            changeRegion.clickChangeRegionBtn();
+            okChangeRegion.clickChangeRegionBtn();
             //ввести название несуществующего города в поле поиска в попапе локализации - отобразится некликабельная подсказка "Название города введено не верно" //changeRegion.searchMissingRegion("Moskva");
-            changeRegion.searchMissingRegion("Moskva");
+            okChangeRegion.searchMissingRegion("Moskva");
             //закрыть попап локализации крестиком
-            changeRegion.clickClosePopupLocationBtn();
+            okChangeRegion.clickClosePopupLocationBtn();
             //попап локализации не отображается
             Thread.sleep(500);
-            Assert.assertFalse(changeRegion.isPopupLocationDisplayed());
+            Assert.assertFalse(okChangeRegion.isPopupLocationDisplayed());
 
 
             System.out.println("ChangeRegionEmptyCartTest: смена региона из хедера на странице Авторезина, корзина пустая, аноним  = ОК");

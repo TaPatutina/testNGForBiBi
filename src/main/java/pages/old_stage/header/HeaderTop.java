@@ -13,10 +13,10 @@ public class HeaderTop {
     private WebDriver driver;
 
 
-    @FindBy(xpath = "//*[@class='auth is-active']/a[@class='btn btn--link btn--sm auth__signout']") private WebElement header_signout_btn;
-    @FindBy(xpath = "//*[@id='auth-signin']/*[text() = 'Войти']") private WebElement header_signin_btn;
-    @FindBy(xpath = "//*[@class='icon icon--logout']") private WebElement header_signout_btn_icon;
-    @FindBy(xpath = "//*[@class='auth is-active']//span[@class= 'btn__text']") private WebElement header_profile_btn_text;
+    @FindBy(xpath = "//*[@class='auth is-active']/a[@class='btn btn--link btn--sm auth__signout']") private WebElement headerSignoutBtn;
+    @FindBy(xpath = "//*[@id='auth-signin']/*[text() = 'Войти']") private WebElement headerSigninBtn;
+    @FindBy(xpath = "//*[@class='icon icon--logout']") private WebElement headerSignoutBtnIcon;
+    @FindBy(xpath = "//*[@class='auth is-active']//span[@class= 'btn__text']") private WebElement headerProfileBtnText;
 
 
 
@@ -32,20 +32,20 @@ public class HeaderTop {
 
     //отображается кнопка Войти в хедере //headerTop.isSignInBtnToBe();
     public void isSignInBtnToBe(){
-        WebElement isSignInBtnIcon = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(header_signin_btn));
+        WebElement isSignInBtnIcon = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(headerSigninBtn));
     }
 
 
     //отображается кнопка Выйти в хедере //headerTop.isSignOutBtnToBe();
     public void isSignOutBtnToBe(){
-        Boolean isSignOutBtnTitle = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.domPropertyToBe(header_signout_btn, "title", "Выйти"));
-        Boolean isSignOutBtnHref = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.attributeToBe(header_signout_btn, "pathname", "/logout"));
-        WebElement isSignOutBtnIcon = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(header_signout_btn_icon));
+        Boolean isSignOutBtnTitle = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.domPropertyToBe(headerSignoutBtn, "title", "Выйти"));
+        Boolean isSignOutBtnHref = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.attributeToBe(headerSignoutBtn, "pathname", "/logout"));
+        WebElement isSignOutBtnIcon = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOf(headerSignoutBtnIcon));
     }
 
    //кликнуть на имя профиля в хедере //headerTop.clickOnProfileBtn();
     public void clickOnProfileBtn(){
-        header_profile_btn_text.click();
+        headerProfileBtnText.click();
     }
 
 

@@ -10,6 +10,7 @@ import pages.base.BasePage;
 import pages.homePage.BibiHomePage;
 import pages.homePage.header.MiniCartHomePage;
 import pages.homePage.header.LocalizationPanelHomePage;
+import pages.otherObjects.LoginPage;
 import pages.otherObjects.header.LocalizationPanel;
 import pages.otherObjects.listing.OrdinaryListingPage;
 import pages.otherObjects.productPage.PopupAddToCart;
@@ -28,6 +29,7 @@ public class BaseTest {
     protected LocalizationPanelHomePage localizationPanelHomePage = new LocalizationPanelHomePage(driver);
     protected LocalizationPanel localizationPanel = new LocalizationPanel(driver);
     protected PopupAddToCart popupAddToCart = new PopupAddToCart(driver);
+    protected LoginPage loginPage = new LoginPage(driver);
 
 
 

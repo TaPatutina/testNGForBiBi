@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class LoginPage {
+public class OldLoginPage {
     private final WebDriver driver;
 
     @FindBy(xpath = "//*[@id='auth-signin']/*[text() = 'Войти']") private WebElement headerSigninBtn;
@@ -33,7 +33,7 @@ public class LoginPage {
 
 
     //Constructor
-    public LoginPage(WebDriver driver){
+    public OldLoginPage(WebDriver driver){
         this.driver=driver;
         //Initialise Elements
         PageFactory.initElements(driver, this);

@@ -6,9 +6,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import pages.old_stage.autorization.LoginPage;
+import pages.old_stage.autorization.OldLoginPage;
 import pages.old_stage.autorization.PagesMyAccount;
-import pages.old_stage.header.ChangeRegion;
+import pages.old_stage.header.Ok_ChangeRegion;
 import pages.old_stage.header.HeaderTop;
 import pages.old_stage.header.Plashka;
 
@@ -50,14 +50,14 @@ public class ChangeStoreFromProfilePageTest {
 
 
             //СОЗДАТЬ ОБЪЕКТ  LoginPage
-            LoginPage loginPage = new LoginPage(driver);
+            OldLoginPage oldLoginPage = new OldLoginPage(driver);
 
             //кликнуть Войти в шапке
-            loginPage.SignInFromHeader();
+            oldLoginPage.SignInFromHeader();
             //отображается попап авторизации
-            Assert.assertTrue(loginPage.isPopupAuthorizationToBe());
+            Assert.assertTrue(oldLoginPage.isPopupAuthorizationToBe());
             //залогиниться
-            loginPage.signIn("tapatutinabibi@ya.ru", "123456");
+            oldLoginPage.signIn("tapatutinabibi@ya.ru", "123456");
 
 
             //отображается кнопка Выйти в хедере
@@ -76,10 +76,10 @@ public class ChangeStoreFromProfilePageTest {
 
 
             //СОЗДАТЬ ОБЪЕКТ ChangeRegion
-            ChangeRegion changeRegion = new ChangeRegion(driver);
+            Ok_ChangeRegion okChangeRegion = new Ok_ChangeRegion(driver);
 
             // установить через хедер регион Москва, магазин 017_Химки > в хедере отображ Химки Молодежная
-            changeRegion.putFromHeaderMskPos017Chimki();
+            okChangeRegion.putFromHeaderMskPos017Chimki();
 
             Thread.sleep(100);
             //страница профиля > блок Магазин самовывоза > кликнуть Сменить магазин > выбрать из списка на карте Полбина,6 > магаз сменился в шапке и в блоке профиля

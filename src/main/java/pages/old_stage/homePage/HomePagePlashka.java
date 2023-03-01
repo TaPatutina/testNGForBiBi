@@ -18,51 +18,51 @@ public class HomePagePlashka extends BasePage {
     }
 
 
-    private final By agree_with_the_city_btn0 = By.xpath("//*[@data-js='region, sliderPanel']//*[contains(text(),'Да, верно')]");
+    private final By agreeWithTheCityBtn0 = By.xpath("//*[@data-js='region, sliderPanel']//*[contains(text(),'Да, верно')]");
 
     @FindBy(xpath = "//*[@data-js='region, sliderPanel']//*[contains(text(),'Да, верно')]")
-    private WebElement agree_with_the_city_btn;
+    private WebElement agreeWithTheCityBtn;
     @FindBy(xpath = "//*[@class='col-12 col-sm-6 pb-20 pb-sm-0']/div[@class='h5']")
-    private WebElement region_request_text;
+    private WebElement regionRequestText;
     @FindBy(xpath = "//*[@class='region-panel fade show']")
-    private List<WebElement> elements_of_plashka;
+    private List<WebElement> elementsOfPlashka;
     @FindBy(xpath = "//*[@class='region-panel fade show']//div[@class='small']")
-    private WebElement annotation_region_request;
+    private WebElement annotationRegionRequest;
     @FindBy(xpath = "//*[@class='region-panel__link h6 mb-0 js-region-link js-close-panel']")
-    private WebElement choose_another_region_btn;
+    private WebElement chooseAnotherRegionBtn;
     @FindBy(xpath = "//*[@class='iconed-links__item iconed-links__item--row']")
-    private WebElement change_region_btn;
+    private WebElement changeRegionBtn;
     @FindBy(xpath = "//*[@id='popup-location']")
-    private WebElement popup_location;
+    private WebElement popupLocation;
     @FindBy(xpath = "//*[@id='popup_location']")
-    private List<WebElement> elements_of_popup_location;
+    private List<WebElement> elementsOfPopupLocation;
     @FindBy(xpath = "//*[@class='modal-title h2']")
-    private WebElement popup_location_title_text;
+    private WebElement popupLocationTitleText;
     @FindBy(xpath = "//ul[@class='list-column list-unstyled']//b/*[@class='js-region-select-link']")
-    private WebElement popup_location_default_city;
+    private WebElement popupLocationDefaultCity;
     @FindBy(xpath = "(//*[@id='popup-location'])//*[contains(text(),'Санкт-Петербург')]")
-    private WebElement region_link_SPb;
+    private WebElement regionLinkSpb;
     @FindBy(xpath = "//*[@id='popup-location']/*[@class='popup__close']")
-    private WebElement close_popup_location_btn;
+    private WebElement closePopupLocationBtn;
     @FindBy(xpath = "//*[@class='iconed-links__item iconed-links__item--row']")
-    private WebElement name_of_region_in_header;
+    private WebElement nameOfRegionInHeader;
     @FindBy(xpath = "//*[@class='js-mode-name']")
-    private WebElement name_of_delivery_mode_in_header;
+    private WebElement nameOfDeliveryModeInHeader;
     @FindBy(xpath = "//*[@class='site-region__address small d-block js-address']")
-    private WebElement name_of_store_in_header;
+    private WebElement nameOfStoreInHeader;
 
 
     //создать объект HomePagePlashka //HomePagePlashka hpPlashka = new HomePagePlashka(driver);
 
     //согласиться с городом //hpPlashka.clickAgreeWithTheCityIndex0();
     public HomePagePlashka clickAgreeWithTheCityIndex0() {
-        driver.findElement(agree_with_the_city_btn0).click();
+        driver.findElement(agreeWithTheCityBtn0).click();
         return this;
     }
 
     //дождаться плашки согласия с городом и согласиться с городом //hpPlashka.findAndClickAgreeWithTheCityIndex();
     public HomePagePlashka findAndClickAgreeWithTheCityIndex() {
-        WebElement plashkaFind = driver.findElement(agree_with_the_city_btn0);
+        WebElement plashkaFind = driver.findElement(agreeWithTheCityBtn0);
         waitElementVisible(plashkaFind).click();
         return this;
     }
@@ -70,66 +70,66 @@ public class HomePagePlashka extends BasePage {
 
     //плашка закрылась //Assert.assertFalse(hpPlashka.isPanelOpenedIndex());
     public boolean isPanelOpenedIndex() {
-        return agree_with_the_city_btn.getText().contains("Да, верно");
+        return agreeWithTheCityBtn.getText().contains("Да, верно");
     }
 
     //проверить наличие элементов плашки согласия с регионом
     public void isElementsOfPlashkaToBe() {
-        List<WebElement> elements_of_plashka_list = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOfAllElements(elements_of_plashka));
-        String isRegionRequestText = region_request_text.getText();
+        List<WebElement> elements_of_plashka_list = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOfAllElements(elementsOfPlashka));
+        String isRegionRequestText = regionRequestText.getText();
         Assert.assertEquals(isRegionRequestText, "Ваш город Москва?");
-        String isAnnotationRegionRequestText = annotation_region_request.getText();
+        String isAnnotationRegionRequestText = annotationRegionRequest.getText();
         Assert.assertEquals(isAnnotationRegionRequestText, "От выбранного города зависят цены, наличие товара и способы доставки");
-        String agreeWithTheCityBtnText = agree_with_the_city_btn.getText();
+        String agreeWithTheCityBtnText = agreeWithTheCityBtn.getText();
         Assert.assertEquals(agreeWithTheCityBtnText, "Да, верно");
 
     }
 
     //согласиться с городом
     public void clickAgreeWithTheCity() {
-        agree_with_the_city_btn.click();
+        agreeWithTheCityBtn.click();
     }
 
     //плашка закрылась
     public boolean isElementsOfPlashkaNotVisible() {
-        Boolean ElementsOfPlashkaNotVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.not(ExpectedConditions.visibilityOfAllElements(elements_of_plashka)));
+        Boolean ElementsOfPlashkaNotVisible = new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.not(ExpectedConditions.visibilityOfAllElements(elementsOfPlashka)));
         return false;
     }
 
 
     //кликнуть Выбрать другой регион //hpPlashka.clickChooseAnotherRegionBtn();
     public void clickChooseAnotherRegionBtn() {
-        choose_another_region_btn.click();
+        chooseAnotherRegionBtn.click();
     }
 
     //выбранный по умолчанию регион - Москва // String popupLocationSelectedRegionName = hpPlashka.isSelectedRegionName(); Assert.assertEquals(popupLocationSelectedRegionName, "Москва");
     public String isSelectedRegionName() {
-        return popup_location_default_city.getAttribute("text");
+        return popupLocationDefaultCity.getAttribute("text");
     }
 
     //кликнуть на Санкт-Петербург // hpPlashka.clickToRegionLink_SPb();
     public void clickToRegionLink_SPb() {
-        region_link_SPb.click();
+        regionLinkSpb.click();
     }
 
     //плашка закрылась (не отображается кнопка с текстом "Да, верно" - через assert (быстро) //Assert.assertFalse(hpPlashka.isAgreeWithTheCityBtnTextVisible());
     public boolean isAgreeWithTheCityBtnTextVisible() {
-        return agree_with_the_city_btn.getText().contentEquals("Да, верно");
+        return agreeWithTheCityBtn.getText().contentEquals("Да, верно");
     }
 
     //в шапке отображается регион СПб //String nameOfRegionInHeader = hpPlashka.isNameOfRegionInHeader(); Assert.assertEquals(nameOfRegionInHeader, "Санкт-Петербург");
     public String isNameOfRegionInHeader() {
-        return name_of_region_in_header.getText();
+        return nameOfRegionInHeader.getText();
     }
 
     //в шапке по умолчанию отображается способ получения - Самовывоз из магазина  //String nameOfDeliveryModeInHeader = hpPlashka.isNameOfDeliveryModeInHeader(); Assert.assertEquals(nameOfDeliveryModeInHeader, "Самовывоз из магазина");
     public String isNameOfDeliveryModeInHeader() {
-        return name_of_delivery_mode_in_header.getText();
+        return nameOfDeliveryModeInHeader.getText();
     }
 
     //в шапке по умолчанию отображается магазин СПб. Шлиссельбургский пр-т  //String nameOfStoreInHeader = hpPlashka.isNameOfStoreInHeader(); Assert.assertEquals(nameOfStoreInHeader, "СПб. Шлиссельбургский пр-т");
     public String isNameOfStoreInHeader() {
-        return name_of_store_in_header.getText();
+        return nameOfStoreInHeader.getText();
     }
 
 

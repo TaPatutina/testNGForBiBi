@@ -13,12 +13,9 @@ public class TestTwo extends BaseTest {
     public void plashka() {
         basePage.open(BIBI_HOME_PAGE);
         localizationPanelHomePage
-                //.isElementsOfPlashkaToBe()
+                .isElementsOfPlashkaToBe()
                 .clickAgreeRegionBtn()
                 .isAgreeCityBtnTextInvisible();
-
-
-
 
 
     }

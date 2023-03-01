@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import pages.old_stage.autorization.LoginPage;
+import pages.old_stage.autorization.OldLoginPage;
 import pages.old_stage.autorization.PagesMyAccount;
 import pages.old_stage.header.HeaderTop;
 import pages.old_stage.header.Plashka;
@@ -50,14 +50,14 @@ public class ProfilePageElementsTest {
 
 
             //создать объект  LoginPage
-            LoginPage loginPage = new LoginPage(driver);
+            OldLoginPage oldLoginPage = new OldLoginPage(driver);
 
             //кликнуть Войти в шапке
-            loginPage.SignInFromHeader();
+            oldLoginPage.SignInFromHeader();
             //отображается попап авторизации
-            Assert.assertTrue(loginPage.isPopupAuthorizationToBe());
+            Assert.assertTrue(oldLoginPage.isPopupAuthorizationToBe());
             //залогиниться
-            loginPage.signIn("tapatutinabibi@ya.ru", "123456");
+            oldLoginPage.signIn("tapatutinabibi@ya.ru", "123456");
 
 
             //отображается кнопка Выйти в хедере

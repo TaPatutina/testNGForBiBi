@@ -12,7 +12,7 @@ public class TopWriteUs {
 
 
 
-    @FindBy(xpath = "//*[@class='btn btn-outline-info write-us__btn fading__btn']") private WebElement write_us_header_btn;
+    @FindBy(xpath = "//*[@class='btn btn-outline-info write-us__btn fading__btn']") private WebElement writeUsHeaderBtn;
 
 
 
@@ -27,7 +27,8 @@ public class TopWriteUs {
     }
 
 
-public void clickWriteUsHeaderBtn(){write_us_header_btn.click();}
+public void clickWriteUsHeaderBtn(){
+    writeUsHeaderBtn.click();}
 
 
 
